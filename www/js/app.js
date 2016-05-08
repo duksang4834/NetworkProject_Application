@@ -38,15 +38,15 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
         controller: 'IntroCtrl'
     })
 
-    .state('intro.login', {
-        url: '/login',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/intro/intro-login.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    });
+  .state('intro.login', {
+      url: '/login',
+      views: {
+          'introContent': {
+              templateUrl: 'templates/intro/intro-login.html',
+              controller: 'IntroLoginCtrl'
+          }
+      }
+  });
 
 
   // if none of the above states are matched, use this as the fallback
