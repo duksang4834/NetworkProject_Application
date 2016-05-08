@@ -37,12 +37,105 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
         templateUrl: 'templates/intro/intro.html',
         controller: 'IntroCtrl'
     })
-
-    .state('intro.login', {
-        url: '/login',
+////////Home////////
+    .state('home', {
+        url: '/home',
+        views: {
+            'introContent': 
+                templateUrl: 'templates/Home/home.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    });
+    .state('join', {
+        url: '/home/join',
         views: {
             'introContent': {
-                templateUrl: 'templates/intro/intro-login.html',
+                templateUrl: 'templates/Home/join.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    })
+    .state('login', {
+        url: '/home/login',
+        views: {
+            'introContent': {
+                templateUrl: 'templates/Home/login.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    });
+////////Search////////
+    .state('search', {
+        url: '/home/:search',
+        views: {
+            'introContent': {
+                templateUrl: 'templates/Search/search.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    })
+    .state('searchDetail', {
+        url: '/home/:search/:searchDetail',
+        views: {
+            'introContent': {
+                templateUrl: 'templates/Search/searchDetail.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    })
+    .state('enroll', {
+        url: '/home/:search/:searchDetail/:enroll',
+        views: {
+            'introContent': {
+                templateUrl: 'templates/Search/enroll.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    });
+////////Book Detail////////
+    .state('bookDetail_1', {
+        url: '/home/:bookDetail_1',
+        views: {
+            'introContent': {
+                templateUrl: 'templates/BookDetail/bookDetail_1.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    })
+    .state('bookDetail_2', {
+        url: '/home/:bookDetail_2',
+        views: {
+            'introContent': {
+                templateUrl: 'templates/BookDetail/bookDetail_2.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    })
+    .state('bookDetail_3', {
+        url: '/home/:bookDetail_3',
+        views: {
+            'introContent': {
+                templateUrl: 'templates/BookDetail/bookDetail_3.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    });
+////////Rent Search////////
+    .state('rentSearch', {
+        url: '/home/:rentSearch',
+        views: {
+            'introContent': {
+                templateUrl: 'templates/rentSearch/rentSearch.html',
+                controller: 'IntroLoginCtrl'
+            }
+        }
+    })
+    .state('rentSearchDetail', {
+        url: '/home/:rentSearch/:rentSearchDetail',
+        views: {
+            'introContent': {
+                templateUrl: 'templates/rentSearch/rentSearchDetail.html',
                 controller: 'IntroLoginCtrl'
             }
         }
