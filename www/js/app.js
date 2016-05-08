@@ -46,6 +46,23 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
               controller: 'IntroLoginCtrl'
           }
       }
+  })
+
+  .state('main', {
+    url: '/main',
+    abstract: true,
+    templateUrl: 'templates/main/main.html',
+    controller: 'MainCtrl'
+  })
+
+  .state('main.list', {
+    url: 'main/list',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/main/main-list.html',
+        controller: 'MainListCtrl'
+      }
+    }
   });
 
 
