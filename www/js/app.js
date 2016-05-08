@@ -44,6 +44,7 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
         controller: 'IntroLoginCtrl'
     })
 
+<<<<<<< HEAD
     .state('join', {
         url: '/home/join',
         templateUrl: 'templates/Home/join.html',
@@ -127,6 +128,17 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
             }
         }
     });
+=======
+  .state('intro.login', {
+      url: '/login',
+      views: {
+          'introContent': {
+              templateUrl: 'templates/intro/intro-login.html',
+              controller: 'IntroLoginCtrl'
+          }
+      }
+  });
+>>>>>>> master
 
 
   // if none of the above states are matched, use this as the fallback
