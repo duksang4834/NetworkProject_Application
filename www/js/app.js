@@ -40,37 +40,24 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
 ////////Home////////
     .state('home', {
         url: '/home',
-        views: {
-            'introContent': 
-                templateUrl: 'templates/Home/home.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    });
+        templateUrl: 'templates/Home/home.html',
+        controller: 'IntroLoginCtrl'
+    })
+
     .state('join', {
         url: '/home/join',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/Home/join.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
+        templateUrl: 'templates/Home/join.html',
+        controller: 'IntroLoginCtrl'
     })
     .state('login', {
         url: '/home/login',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/Home/login.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    });
+            templateUrl: 'templates/Home/login.html',
+            controller: 'IntroLoginCtrl'
+    })
 ////////Search////////
     .state('search', {
-        url: '/home/:search',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/Search/search.html',
+        url: '/home/search',
+                        templateUrl: 'templates/Search/search.html',
                 controller: 'IntroLoginCtrl'
             }
         }
@@ -92,7 +79,7 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
                 controller: 'IntroLoginCtrl'
             }
         }
-    });
+    })
 ////////Book Detail////////
     .state('bookDetail_1', {
         url: '/home/:bookDetail_1',
@@ -120,7 +107,7 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
                 controller: 'IntroLoginCtrl'
             }
         }
-    });
+    })
 ////////Rent Search////////
     .state('rentSearch', {
         url: '/home/:rentSearch',
