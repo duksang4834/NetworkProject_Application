@@ -5,10 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
+angular.module('bookApp', ['ionic', 'ngCordova', 'bookApp.controllers', 'bookApp.services'])
 
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $cordovaPush) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,6 +21,33 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    // document.addEventListener("deviceready", function(){
+    //   $cordovaPush.
+    // };
+
+    // document.addEventListener("deviceready", function(){
+    //   $rootScope.$on('$cordovaPush:notificationReceived', function (event, notification) {
+
+    //     if (notification.alert) {
+    //       navigator.notification.alert(notification.alert);
+    //     }
+
+    //     if (notification.sound) {
+    //       var snd = new Media(event.sound);
+    //       snd.play();
+    //     }
+
+    //     if (notification.badge) {
+    //       $cordovaPush.setBadgeNumber(notification.badge).then(function(result) {
+    //         // Success!
+    //       }, function(err) {
+    //         // An error occurred. Show a message to the user
+    //       });
+    //     }
+
+    //   });
+    // });
   });
 })
 

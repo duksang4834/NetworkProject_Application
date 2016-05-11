@@ -1,36 +1,16 @@
-<ion-view>
-
-
-<ion-side-menus>
-
-  <ion-side-menu>
-    <div class="menu-wrapper ">
-      <ul class="list">
-        <li class="item">Item 1</li>
-        <li class="item">Item 2</li>
-        <li class="item">Item 3</li>
-        <li class="item">Item 4</li>
-        <li class="item">Item 5</li>
-        <li class="item">Item 6</li>
-        <li class="item">Item 7</li>
-      </ul>
-    </div>
-  </ion-side-menu>
-
-  <ion-side-menu-content>
-   <ion-content id="main-list">
-
-    <div class="bar bar-header">
-      <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
-      <div class="title">내 책장</div>
-    </div>
-      
-
-    <div class="card">
-
+<ion-view view-title="내책장">
+  <ion-nav-buttons side="primary">
+    <button class="button button-icon icon ion-navicon" ng-click="toggleLeft()">
+    </button>
+  </ion-nav-buttons>
+<ion-content id="main-list" on-scroll="moveScroll(event)">
+  
+  <div class="card">
+    <div id="add-button">+</div>
+    
   <div class="item item-divider">
     대여가능
-    <button class="button button-small button-icon icon ion-plus" ng-click="goRegisterSearch()"></button>
+    <!-- <button class="button button-small button-icon icon ion-plus" ng-click="goRegisterSearch()"></button> -->
   </div>
   <div class="item item-text-wrap">
     <div class="list">
@@ -66,7 +46,7 @@
 
   <div class="item item-divider">
     빌린 책
-    <button class="button button-small button-icon icon ion-plus" ng-click="goRentSearch()"></button>
+    <!-- <button class="button button-small button-icon icon ion-plus" ng-click="goRentSearch()"></button> -->
   </div>
   <div class="item item-text-wrap">
     <div class="list">
@@ -87,13 +67,5 @@
   </div>
   </div>
     </div>
-
-
-    </ion-content>
-
-  </ion-side-menu-content>
-
-
-</ion-side-menus>
-
+</ion-content>
 </ion-view>
