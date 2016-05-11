@@ -1,6 +1,6 @@
 angular.module('bookApp.controllers')
 
-	.controller('MainListCtrl', function($scope, $state, $ionicScrollDelegate, $cordovaDevice) {
+	.controller('MainListCtrl', function($scope, $state, $ionicScrollDelegate) {
 
   	$scope.goRentSearch = function () {
 
@@ -16,6 +16,6 @@ angular.module('bookApp.controllers')
     		$ionicSideMenuDelegate.toggleLeft();
   		};
 
-		var uuid = $cordovaDevice.getUUID();
+		// var uuid = $cordovaDevice.getUUID();, $cordovaDevice
 
 	});

@@ -9796,12 +9796,15 @@ a.button {
 #login #icon-container {
   height: 50%; }
 
-<<<<<<< HEAD
+#login .signup {
+  text-decoration: underline;
+  color: #878787; }
+
 .ion-navigation {
   margin-left: 20px; }
 
 .card {
-  padding-top: 46px;
+  padding-top: 24px;
   position: relative; }
 
 .ion-plus {
@@ -9813,10 +9816,6 @@ a.button {
 
 .item-input-inset {
   padding-top: 53px; }
-=======
-#login .signup {
-  text-decoration: underline;
-  color: #878787; }
 
 #signup .scroll {
   height: 100%;
@@ -9824,4 +9823,3 @@ a.button {
 
 #signup .container {
   padding-top: 26px; }
->>>>>>> master
