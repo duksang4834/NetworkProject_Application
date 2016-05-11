@@ -7,6 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
 
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -37,98 +38,6 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
         templateUrl: 'templates/intro/intro.html',
         controller: 'IntroCtrl'
     })
-////////Home////////
-    .state('home', {
-        url: '/home',
-        templateUrl: 'templates/Home/home.html',
-        controller: 'IntroLoginCtrl'
-    })
-
-<<<<<<< HEAD
-    .state('join', {
-        url: '/home/join',
-        templateUrl: 'templates/Home/join.html',
-        controller: 'IntroLoginCtrl'
-    })
-    .state('login', {
-        url: '/home/login',
-            templateUrl: 'templates/Home/login.html',
-            controller: 'IntroLoginCtrl'
-    })
-////////Search////////
-    .state('search', {
-        url: '/home/search',
-                        templateUrl: 'templates/Search/search.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    })
-    .state('searchDetail', {
-        url: '/home/:search/:searchDetail',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/Search/searchDetail.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    })
-    .state('enroll', {
-        url: '/home/:search/:searchDetail/:enroll',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/Search/enroll.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    })
-////////Book Detail////////
-    .state('bookDetail_1', {
-        url: '/home/:bookDetail_1',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/BookDetail/bookDetail_1.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    })
-    .state('bookDetail_2', {
-        url: '/home/:bookDetail_2',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/BookDetail/bookDetail_2.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    })
-    .state('bookDetail_3', {
-        url: '/home/:bookDetail_3',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/BookDetail/bookDetail_3.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    })
-////////Rent Search////////
-    .state('rentSearch', {
-        url: '/home/:rentSearch',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/rentSearch/rentSearch.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    })
-    .state('rentSearchDetail', {
-        url: '/home/:rentSearch/:rentSearchDetail',
-        views: {
-            'introContent': {
-                templateUrl: 'templates/rentSearch/rentSearchDetail.html',
-                controller: 'IntroLoginCtrl'
-            }
-        }
-    });
-=======
   .state('intro.login', {
       url: '/login',
       views: {
@@ -137,9 +46,78 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
               controller: 'IntroLoginCtrl'
           }
       }
-  });
->>>>>>> master
+  })
 
+  .state('main', {
+    url: '/main',
+    abstract: true,
+    templateUrl: 'templates/main/main.html',
+    controller: 'MainCtrl'
+  })
+
+  .state('main.list', {
+    url: '/list',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/main/main-list.html',
+        controller: 'MainListCtrl'
+      }
+    }
+  })
+
+  .state('rentSearch', {
+    url: '/rentSearch',
+    abstract: true,
+    templateUrl: 'templates/rentSearch/rent-search.html',
+    controller: 'RentSearchCtrl'
+  })
+
+  .state('rentSearch.Main', {
+    url: '/rentSearchMain',
+    views: {
+      'rentSearchContent': {
+        templateUrl: 'templates/rentSearch/rent-search-main.html',
+        controller: 'RentSearchMainCtrl'
+      }
+    }
+  })
+
+  .state('rentSearch.Detail', {
+    url: '/rentSearchDetail',
+    views: {
+      'rentSearchContent': {
+        templateUrl: 'templates/rentSearch/rent-search-detail.html',
+        controller: 'RentSearchDetailCtrl'
+      }
+    }
+  })
+
+  .state('registerSearch', {
+    url: '/registerSearch',
+    abstract: true,
+    templateUrl: 'templates/registerSearch/register-search.html',
+    controller: 'RegisterSearchCtrl'
+  })
+
+  .state('registerSearch.Main', {
+    url: '/registerSearchMain',
+    views: {
+      'registerSearchContent': {
+        templateUrl: 'templates/registerSearch/register-search-main.html',
+        controller: 'RegisterSearchMainCtrl'
+      }
+    }
+  })
+
+  .state('registerSearch.Detail', {
+    url: '/registerSearchDetail',
+    views: {
+      'registerSearchContent': {
+        templateUrl: 'templates/registerSearch/register-search-detail.html',
+        controller: 'RegisterSearchDetailCtrl'
+      }
+    }
+  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/intro/login');

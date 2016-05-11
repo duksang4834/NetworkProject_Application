@@ -9795,3 +9795,20 @@ a.button {
 
 #login #icon-container {
   height: 50%; }
+
+.ion-navigation {
+  margin-left: 20px; }
+
+.card {
+  padding-top: 46px;
+  position: relative; }
+
+.ion-plus {
+  position: relative;
+  float: right; }
+
+.item-divider {
+  height: 48px; }
+
+.item-input-inset {
+  padding-top: 53px; }
