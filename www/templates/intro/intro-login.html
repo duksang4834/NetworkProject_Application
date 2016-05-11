@@ -3,13 +3,14 @@
 	<div id="icon-container"></div>
 	<div class="list">
   		<label class="item item-input login-form">
-    		<input type="text" class="text-center" placeholder="아이디">
+    		<input type="text" class="text-center" placeholder="아이디" ng-model="data.account">
   		</label>
   		<div class="row"></div>
   		<label class="item item-input login-form">
-    		<input type="password" class="text-center" placeholder="비밀번호">
+    		<input type="password" class="text-center" placeholder="비밀번호" ng-model="data.password">
   		</label>
 	</div>
+  <span class="p2 signup" ng-click="goSignup()">회원가입을 원하시면 눌러주세요&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	<div class="button button-full button-positive" ng-click="goMain()">로그인</div>
 </button>
 </ion-content>

@@ -48,6 +48,16 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
       }
   })
 
+  .state('intro.signup', {
+    url: '/signup',
+    views: {
+      'introContent': {
+        templateUrl: 'templates/intro/intro-signup.html',
+        controller: 'IntroSignupCtrl'
+      }
+    }
+  })
+
   .state('main', {
     url: '/main',
     abstract: true,

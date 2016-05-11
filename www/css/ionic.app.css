@@ -9795,3 +9795,14 @@ a.button {
 
 #login #icon-container {
   height: 50%; }
+
+#login .signup {
+  text-decoration: underline;
+  color: #878787; }
+
+#signup .scroll {
+  height: 100%;
+  padding: 10px; }
+
+#signup .container {
+  padding-top: 26px; }
