@@ -7,6 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
 
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -37,7 +38,6 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
         templateUrl: 'templates/intro/intro.html',
         controller: 'IntroCtrl'
     })
-
   .state('intro.login', {
       url: '/login',
       views: {
@@ -66,15 +66,68 @@ angular.module('bookApp', ['ionic', 'bookApp.controllers', 'bookApp.services'])
   })
 
   .state('main.list', {
-    url: 'main/list',
+    url: '/list',
     views: {
       'mainContent': {
         templateUrl: 'templates/main/main-list.html',
         controller: 'MainListCtrl'
       }
     }
-  });
+  })
 
+  .state('rentSearch', {
+    url: '/rentSearch',
+    abstract: true,
+    templateUrl: 'templates/rentSearch/rent-search.html',
+    controller: 'RentSearchCtrl'
+  })
+
+  .state('rentSearch.Main', {
+    url: '/rentSearchMain',
+    views: {
+      'rentSearchContent': {
+        templateUrl: 'templates/rentSearch/rent-search-main.html',
+        controller: 'RentSearchMainCtrl'
+      }
+    }
+  })
+
+  .state('rentSearch.Detail', {
+    url: '/rentSearchDetail',
+    views: {
+      'rentSearchContent': {
+        templateUrl: 'templates/rentSearch/rent-search-detail.html',
+        controller: 'RentSearchDetailCtrl'
+      }
+    }
+  })
+
+  .state('registerSearch', {
+    url: '/registerSearch',
+    abstract: true,
+    templateUrl: 'templates/registerSearch/register-search.html',
+    controller: 'RegisterSearchCtrl'
+  })
+
+  .state('registerSearch.Main', {
+    url: '/registerSearchMain',
+    views: {
+      'registerSearchContent': {
+        templateUrl: 'templates/registerSearch/register-search-main.html',
+        controller: 'RegisterSearchMainCtrl'
+      }
+    }
+  })
+
+  .state('registerSearch.Detail', {
+    url: '/registerSearchDetail',
+    views: {
+      'registerSearchContent': {
+        templateUrl: 'templates/registerSearch/register-search-detail.html',
+        controller: 'RegisterSearchDetailCtrl'
+      }
+    }
+  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/intro/login');
