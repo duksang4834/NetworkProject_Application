@@ -9835,3 +9835,10 @@ a.button {
 
 .item-input-inset {
   padding-top: 53px; }
+
+#signup .scroll {
+  height: 100%;
+  padding: 10px; }
+
+#signup .container {
+  padding-top: 26px; }
