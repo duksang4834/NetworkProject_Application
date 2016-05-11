@@ -9800,26 +9800,38 @@ a.button {
   text-decoration: underline;
   color: #878787; }
 
-.ion-navigation {
-  margin-left: 20px; }
-
-.card {
-  padding-top: 24px;
-  position: relative; }
-
-.ion-plus {
-  position: relative;
-  float: right; }
-
-.item-divider {
-  height: 48px; }
-
-.item-input-inset {
-  padding-top: 53px; }
-
 #signup .scroll {
   height: 100%;
   padding: 10px; }
 
 #signup .container {
   padding-top: 26px; }
+
+#main-list {
+  /*	.ion-navigation {
+		margin-left: 20px;
+	}*/
+  /*.ion-plus {
+		position: relative;
+		float: right;
+	}
+
+	.item-divider{
+		height: 48px;
+	}*/ }
+  #main-list .card {
+    position: relative; }
+    #main-list .card #add-button {
+      position: absolute;
+      right: 5%;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      line-height: 36px;
+      z-index: 10;
+      border: 1px solid #000;
+      text-align: center;
+      font-size: 24px; }
+
+.item-input-inset {
+  padding-top: 53px; }
