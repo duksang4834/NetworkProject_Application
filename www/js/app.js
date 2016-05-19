@@ -22,32 +22,13 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
       StatusBar.styleDefault();
     }
 
-    // document.addEventListener("deviceready", function(){
-    //   $cordovaPush.
-    // };
+    // Ionic.io();
+    // var push = new Ionic.Push({
+    //   'onNotification': function () {
 
-    // document.addEventListener("deviceready", function(){
-    //   $rootScope.$on('$cordovaPush:notificationReceived', function (event, notification) {
-
-    //     if (notification.alert) {
-    //       navigator.notification.alert(notification.alert);
-    //     }
-
-    //     if (notification.sound) {
-    //       var snd = new Media(event.sound);
-    //       snd.play();
-    //     }
-
-    //     if (notification.badge) {
-    //       $cordovaPush.setBadgeNumber(notification.badge).then(function(result) {
-    //         // Success!
-    //       }, function(err) {
-    //         // An error occurred. Show a message to the user
-    //       });
-    //     }
-
-    //   });
+    //   }
     // });
+
   });
 })
 
@@ -102,32 +83,52 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
     }
   })
 
-  .state('rentSearch', {
-    url: '/rentSearch',
-    abstract: true,
-    templateUrl: 'templates/rentSearch/rent-search.html',
-    controller: 'RentSearchCtrl'
-  })
-
-  .state('rentSearch.Main', {
-    url: '/rentSearchMain',
+  .state('main.registerSearch', {
+    url: '/registerSearchMain',
     views: {
-      'rentSearchContent': {
-        templateUrl: 'templates/rentSearch/rent-search-main.html',
-        controller: 'RentSearchMainCtrl'
+      'mainContent': {
+        templateUrl: 'templates/registerSearch/register-search-main.html',
+        controller: 'RegisterSearchMainCtrl'
       }
     }
   })
 
-  .state('rentSearch.Detail', {
-    url: '/rentSearchDetail',
+  .state('main.registerSearchDetail', {
+    url: '/registerSearchDetail',
     views: {
-      'rentSearchContent': {
-        templateUrl: 'templates/rentSearch/rent-search-detail.html',
-        controller: 'RentSearchDetailCtrl'
+      'mainContent': {
+        templateUrl: 'templates/registerSearch/register-search-detail.html',
+        controller: 'RegisterSearchDetailCtrl'
       }
     }
   })
+
+  // .state('rentSearch', {
+  //   url: '/rentSearch',
+  //   abstract: true,
+  //   templateUrl: 'templates/rentSearch/rent-se.html',
+  //   controller: 'RentSearchCtrl'
+  // })
+
+  // .state('rentSearch.Main', {
+  //   url: '/rentSearchMain',
+  //   views: {
+  //     'rentSearchContent': {
+  //       templateUrl: 'templates/rentSearch/rent-search-main.html',
+  //       controller: 'RentSearchMainCtrl'
+  //     }
+  //   }
+  // })
+
+  // .state('rentSearch.Detail', {
+  //   url: '/rentSearchDetail',
+  //   views: {
+  //     'rentSearchContent': {
+  //       templateUrl: 'templates/rentSearch/rent-search-detail.html',
+  //       controller: 'RentSearchDetailCtrl'
+  //     }
+  //   }
+  // })
 
   .state('registerSearch', {
     url: '/registerSearch',
