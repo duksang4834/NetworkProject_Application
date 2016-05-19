@@ -1,6 +1,6 @@
 angular.module('bookApp.controllers')
 
-	.controller('MainListCtrl', function($scope, $rootScope, $state, $ionicSideMenuDelegate, $http, $cordovaPush, $cordovaDevice) {
+	.controller('MainListCtrl', function($scope, $state, $ionicSideMenuDelegate, $http, $cordovaDevice) {
 		// Ionic.io();
 		var androidConfig = {
 				'senderID': '170703260646'
@@ -12,78 +12,29 @@ angular.module('bookApp.controllers')
 			platform;
 
 
-		document.addEventListener('deviceReady', function () {
-			var pushConfig,
-				options = {};
+		Ionic.io();
+		var push = new Ionic.Push({
+			'debug': true,
+			'onNotification': function(notification) {
+    			console.log(notification);
+			 },
+		});
 
-			platform = $cordovaDevice.getPlatform();
-
-			if (platform === 'iOS') {
-				pushConfig = iosConfig;
-			}  else if (platform === 'Android') {
-				pushConfig = androidConfig;
-			}
-
-			// $cordovaPush.unregister(options).then(function(result) {
-			// 	console.log('unregister' + result);
-   //    // Success!
-   //  }, function(err) {
-   //    // Error
-   //  })
-
-			$cordovaPush.register(pushConfig).then(function (deviceToken) {
-				console.log(pushConfig);
-				console.log('deviceToken:' + deviceToken);
-				
-				// $http({
-				// 	method: 'POST',
-				// 	url: 'http://ec2-52-79-167-53.ap-northeast-2.compute.amazonaws.com:8080/registerDevice',
-				// 	params: {
-				// 		account: 'test',
-				// 		device: deviceToken
-				// 	}
-				// });
-
-			}, function (error) {
+		push.register(function (device) {
+			$http({
+				method: 'POST',
+				url: 'http://ec2-52-79-167-53.ap-northeast-2.compute.amazonaws.com:8080/registerDevice',
+				// url: '/api/registerDevice',
+				params: {
+					account: 'test',
+					device: device._token
+				}
+			}).success(function (response) {
+				console.log(response);
+			}).error(function (error) {
 				console.log(error);
 			});
-
-			$rootScope.$on('$cordovaPush:notificationReceived', function(event, notification) {
-      		
-	      		console.log(event);
-	      		console.log(notification);
-
-	      		switch(notification.event) {
-			        case 'registered':
-			          if (notification.regid.length > 0 ) {
-			            console.log('registration ID = ' + notification.regid);
-			            $http({
-							method: 'POST',
-							url: 'http://ec2-52-79-167-53.ap-northeast-2.compute.amazonaws.com:8080/registerDevice',
-							params: {
-								account: 'test',
-								device: notification.regid
-							}
-						});
-			          }
-			          break;
-
-			        case 'message':
-			          // this is the actual push notification. its format depends on the data model from the push server
-			          alert('message = ' + notification.message + ' msgCount = ' + notification.msgcnt);
-			          break;
-
-			        case 'error':
-			          alert('GCM error = ' + notification.msg);
-			          break;
-
-			        default:
-			          		alert('An unknown GCM event has occurred');
-			          		break;
-			      }
-	    	});
-
-
+			console.log(device);
 		});
 
   		$scope.goRentSearch = function () {

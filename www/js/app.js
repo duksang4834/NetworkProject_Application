@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('bookApp', ['ionic', 'ngCordova', 'bookApp.controllers', 'bookApp.services'])
+angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.controllers', 'bookApp.services'])
 
 
 .run(function($ionicPlatform, $cordovaPush) {
