@@ -52,8 +52,6 @@ angular.module('bookApp.controllers')
   		$scope.moveScroll = function (e) {
   			var position = e.detail.scrollTop,
   			target = document.getElementById('add-button');
-
   			target.style.top = position + 'px';
   		};
-
 	});

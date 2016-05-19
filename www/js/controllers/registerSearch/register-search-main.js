@@ -7,4 +7,9 @@ angular.module('bookApp.controllers')
 			$state.go('main.list');
 		};
 
+	$scope.goSearchDetail = function () {
+
+		$state.go('registerSearch.Detail');
+	};
+
   });
