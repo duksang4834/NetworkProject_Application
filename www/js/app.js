@@ -156,7 +156,7 @@ angular.module('bookApp', ['ionic', 'ngCordova', 'bookApp.controllers', 'bookApp
     }
   })
 
-    .state('bookDetail', {
+  .state('bookDetail', {
     url: '/bookDetail',
     abstract: true,
     templateUrl: 'templates/bookDetail/book-detail.html',

@@ -9,9 +9,9 @@
 <div class="list">
 
   <div class="item item-input-inset">
-    <label class="item-input-wrapper">
+    <label class="item-input-wrapper search">
       <i class="icon ion-ios-search placeholder-icon"></i>
-    <input type="search" placeholder="등록하고 싶은 책을 검색해보세요.">
+    <input type="search" placeholder="등록하고 싶은 책을 검색해보세요." ng-keyup="searchList($event)" type="text">
     </label>
     <button class="button" ng-click="goSearchDetail()">검색</button>
   </div>
