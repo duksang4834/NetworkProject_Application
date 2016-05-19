@@ -9807,31 +9807,55 @@ a.button {
 #signup .container {
   padding-top: 26px; }
 
-#main-list {
-  /*	.ion-navigation {
-		margin-left: 20px;
-	}*/
-  /*.ion-plus {
-		position: relative;
-		float: right;
-	}
+#main-list .card {
+  position: relative; }
 
-	.item-divider{
-		height: 48px;
-	}*/ }
-  #main-list .card {
-    position: relative; }
-    #main-list .card #add-button {
-      position: absolute;
-      right: 5%;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      line-height: 36px;
-      z-index: 10;
-      border: 1px solid #000;
-      text-align: center;
-      font-size: 24px; }
+#main-list #add-button1 {
+  position: fixed;
+  right: 5%;
+  margin-top: 410px;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  line-height: 47px;
+  z-index: 10;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 24px;
+  background-color: #CFB57C;
+  padding-top: 15px; }
+
+#main-list #add-button2 {
+  position: fixed;
+  right: 5%;
+  margin-top: 480px;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  line-height: 47px;
+  z-index: 10;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 24px;
+  background-color: #CFB57C;
+  padding-top: 15px; }
+
+#main-list .ion-plus {
+  color: black; }
+
+#main-list .ion-android-search {
+  color: black; }
+
+#main-list .bar-header {
+  background-color: #041435;
+  top: 30px; }
 
 .item-input-inset {
   padding-top: 53px; }
+
+#signup .scroll {
+  height: 100%;
+  padding: 10px; }
+
+#signup .container {
+  padding-top: 26px; }

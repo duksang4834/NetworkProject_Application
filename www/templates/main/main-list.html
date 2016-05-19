@@ -1,4 +1,4 @@
-<ion-view view-title="내책장">
+<ion-view view-title="내 책장">
   <ion-nav-buttons side="primary">
     <button class="button button-icon icon ion-navicon" ng-click="toggleLeft()">
     </button>
@@ -6,11 +6,12 @@
 <ion-content id="main-list" on-scroll="moveScroll(event)">
   
   <div class="card">
-    <div id="add-button">+</div>
-    
+    <div id="add-button1" class="button button-small button-icon icon icon-center ion-plus" ng-click="goRegisterSearch()"></div>
+    <div id="add-button2" class="button button-small button-icon icon ion-android-search" ng-click="goRentSearch()"></div>
+   
+  <!-- type 1 --> 
   <div class="item item-divider">
     대여가능
-    <!-- <button class="button button-small button-icon icon ion-plus" ng-click="goRegisterSearch()"></button> -->
   </div>
   <div class="item item-text-wrap">
     <div class="list">
@@ -31,6 +32,7 @@
   </div>
   </div>
 
+  <!-- type 2 --> 
   <div class="item item-divider">
     대여 중
   </div>
@@ -44,9 +46,9 @@
   </div>
   </div>
 
+  <!-- type 3 --> 
   <div class="item item-divider">
     빌린 책
-    <!-- <button class="button button-small button-icon icon ion-plus" ng-click="goRentSearch()"></button> -->
   </div>
   <div class="item item-text-wrap">
     <div class="list">
