@@ -8,7 +8,7 @@
 angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.controllers', 'bookApp.services'])
 
 
-.run(function($ionicPlatform, $cordovaPush) {
+.run(function($ionicPlatform, $rootScope, Api) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,6 +21,13 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    // Ionic.io();
+    // $rootScope.push = new Ionic.Push({
+    //   'onNotification': function (notification) {
+
+    //   }
+    // });
   });
 })
 
@@ -75,32 +82,52 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
     }
   })
 
-  .state('rentSearch', {
-    url: '/rentSearch',
-    abstract: true,
-    templateUrl: 'templates/rentSearch/rent-search.html',
-    controller: 'RentSearchCtrl'
-  })
-
-  .state('rentSearch.Main', {
-    url: '/rentSearchMain',
+  .state('main.registerSearch', {
+    url: '/registerSearchMain',
     views: {
-      'rentSearchContent': {
-        templateUrl: 'templates/rentSearch/rent-search-main.html',
-        controller: 'RentSearchMainCtrl'
+      'mainContent': {
+        templateUrl: 'templates/registerSearch/register-search-main.html',
+        controller: 'RegisterSearchMainCtrl'
       }
     }
   })
 
-  .state('rentSearch.Detail', {
-    url: '/rentSearchDetail',
+  .state('main.registerSearchDetail', {
+    url: '/registerSearchDetail',
     views: {
-      'rentSearchContent': {
-        templateUrl: 'templates/rentSearch/rent-search-detail.html',
-        controller: 'RentSearchDetailCtrl'
+      'mainContent': {
+        templateUrl: 'templates/registerSearch/register-search-detail.html',
+        controller: 'RegisterSearchDetailCtrl'
       }
     }
   })
+
+  // .state('rentSearch', {
+  //   url: '/rentSearch',
+  //   abstract: true,
+  //   templateUrl: 'templates/rentSearch/rent-se.html',
+  //   controller: 'RentSearchCtrl'
+  // })
+
+  // .state('rentSearch.Main', {
+  //   url: '/rentSearchMain',
+  //   views: {
+  //     'rentSearchContent': {
+  //       templateUrl: 'templates/rentSearch/rent-search-main.html',
+  //       controller: 'RentSearchMainCtrl'
+  //     }
+  //   }
+  // })
+
+  // .state('rentSearch.Detail', {
+  //   url: '/rentSearchDetail',
+  //   views: {
+  //     'rentSearchContent': {
+  //       templateUrl: 'templates/rentSearch/rent-search-detail.html',
+  //       controller: 'RentSearchDetailCtrl'
+  //     }
+  //   }
+  // })
 
   .state('registerSearch', {
     url: '/registerSearch',

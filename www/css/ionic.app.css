@@ -9807,10 +9807,7 @@ a.button {
 #signup .container {
   padding-top: 26px; }
 
-#main-list .card {
-  position: relative; }
-
-#main-list #add-button1 {
+#add-button1 {
   position: fixed;
   right: 5%;
   margin-top: 410px;
@@ -9825,7 +9822,7 @@ a.button {
   background-color: #CFB57C;
   padding-top: 15px; }
 
-#main-list #add-button2 {
+#add-button2 {
   position: fixed;
   right: 5%;
   margin-top: 480px;
@@ -9840,6 +9837,9 @@ a.button {
   background-color: #CFB57C;
   padding-top: 15px; }
 
+#main-list .card {
+  position: relative; }
+
 #main-list .ion-plus {
   color: black; }
 
@@ -9850,6 +9850,9 @@ a.button {
   background-color: #041435;
   top: 30px; }
 
+/*.item-input-inset {
+  padding-top: 53px; }*/
+
 #main-list .item-divider {
   background-color: #012D44;
   color: white;
@@ -9857,9 +9860,6 @@ a.button {
 
 #main-list .bar-header {
   background-color: red; }
-
-.item-input-inset {
-  padding-top: 53px; }
 
 #signup .scroll {
   height: 100%;

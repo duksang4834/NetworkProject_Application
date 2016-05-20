@@ -1,6 +1,7 @@
-angular.module('enertalkHomeUSA.services')
+angular.module('bookApp.services')
 
 	.service('User', function () {
 
-		
-	}
+		this.userInfo = {};
+
+	});

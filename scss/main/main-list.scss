@@ -1,9 +1,4 @@
-#main-list {
-	.card {
-		position: relative;
-	}
-
-	#add-button1 {
+#add-button1 {
 			position: fixed;
 			right: 5%;
 			margin-top: 410px;
@@ -36,6 +31,13 @@
 			padding-top: 15px;
 			color: white;
 		}
+		
+#main-list {
+	.card {
+		position: relative;
+	}
+
+	
 
 		.ion-plus{
 			color: black;
