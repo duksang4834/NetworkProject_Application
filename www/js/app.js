@@ -22,12 +22,12 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
       StatusBar.styleDefault();
     }
 
-    Ionic.io();
-    $rootScope.push = new Ionic.Push({
-      'onNotification': function (notification) {
+    // Ionic.io();
+    // $rootScope.push = new Ionic.Push({
+    //   'onNotification': function (notification) {
 
-      }
-    });
+    //   }
+    // });
   });
 })
 
