@@ -15,8 +15,9 @@
 			border: 1px solid black;
 			text-align: center;
 			font-size: 24px;
-			background-color: #CFB57C;
+			background-color: #000000;
 			padding-top: 15px;
+			color: white;
 		}
 
 		#add-button2 {
@@ -31,8 +32,9 @@
 			border: 1px solid black;
 			text-align: center;
 			font-size: 24px;
-			background-color: #CFB57C;
+			background-color: #000000;
 			padding-top: 15px;
+			color: white;
 		}
 
 		.ion-plus{
@@ -46,6 +48,20 @@
 		.bar-header{
 			background-color: #041435;
 			top: 30px;
+		}
 
+		.item-divider{
+			background-color: #26ADE4;
+			color: black;
+			margin-top: -2px;
+		}
+
+		.bar{
+			background-color: 
+		}
+
+		.scroll-content{
+			margin-top: -18px;
 		}
 }
+

@@ -9850,6 +9850,14 @@ a.button {
   background-color: #041435;
   top: 30px; }
 
+#main-list .item-divider {
+  background-color: #012D44;
+  color: white;
+  margin-top: -2px; }
+
+#main-list .bar-header {
+  background-color: red; }
+
 .item-input-inset {
   padding-top: 53px; }
 

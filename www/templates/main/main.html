@@ -11,11 +11,13 @@
 </ion-side-menu-content>
 
 <ion-side-menu side="left">
-<ion-content>
+<ion-content id="main-side">
 <ion-list>
-<!-- <ion-item class="user-profile">
-	<img src="img/adam.png">
-</ion-item> -->
+
+<ion-item class="item user-profile" style="height:500px background-color: red">
+	<div class="user-name" style="padding:40px">name</div>
+</ion-item>
+
 <ion-item menu-close ng-click="goLogout()">logout</ion-item>
 </ion-list>
 </ion-content>
