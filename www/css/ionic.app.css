@@ -9850,8 +9850,8 @@ a.button {
   background-color: #041435;
   top: 30px; }
 
-/*.item-input-inset {
-  padding-top: 53px; }*/
+.item-input-inset {
+  padding-top: 53px; }
 
 #signup .scroll {
   height: 100%;
