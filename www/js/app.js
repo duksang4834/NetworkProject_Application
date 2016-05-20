@@ -8,7 +8,7 @@
 angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.controllers', 'bookApp.services'])
 
 
-.run(function($ionicPlatform, $cordovaPush) {
+.run(function($ionicPlatform, $rootScope, Api) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -22,12 +22,13 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
       StatusBar.styleDefault();
     }
 
-    // Ionic.io();
-    // var push = new Ionic.Push({
-    //   'onNotification': function () {
+    Ionic.io();
+    $rootScope.push = new Ionic.Push({
+      'onNotification': function (notification) {
 
-    //   }
-    // });
+      }
+    });
+
 
   });
 })

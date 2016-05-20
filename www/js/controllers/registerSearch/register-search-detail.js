@@ -14,15 +14,15 @@ angular.module('bookApp.controllers')
 				url: '/api/registerBook',
 				params: {
 					account: 'test',
-					price: '1000',
+					price: 1000,
 					start_date: (new Date()).getTime(),
-					end_date: '1',
-					cleaness: '1',
+					end_date: (new Date()).getTime() + 1000,
+					cleanness: 1,
 					title: $scope.item.title,
 					author: $scope.item.author,
 					image: $scope.item.image,
-					publisher: $scope.item.publisher || undefined,
-					pubdate: $scope.item.pubdate || '0'
+					publisher: $scope.item.publisher,
+					pubdate: $scope.item.pubdate
 				}
 			});
 		};

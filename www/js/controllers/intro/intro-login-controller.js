@@ -1,6 +1,6 @@
 angular.module('bookApp.controllers')
 
-	.controller('IntroLoginCtrl', function ($scope, $state, $http) {
+	.controller('IntroLoginCtrl', function ($scope, $state, $http, Api, User) {
 
 		$scope.data = {
 			account: '',
@@ -9,18 +9,18 @@ angular.module('bookApp.controllers')
 
 		$scope.goMain = function () {
 
-			$http({
-				method: 'GET',
-				// url: 'http://ec2-52-79-167-53.ap-northeast-2.compute.amazonaws.com:8080/login',
-				url: '/api/login',
-				params: {
-					account: $scope.data.account,
-					password: $scope.data.password
-				}
-			}).success(function (response) {
-				console.log(response);
-				$state.go('main.list');
+			Api.login($scope.data).success(function (response1) {
+				Api.getUserInfo($scope.data).success(function (response2) {
+					User.userInfo = response2;
+					console.log(User.userInfo);
+					$state.go('main.list');
+				}).error(function (error) {
+
+				});
+			}).error(function (error) {
+				// login error
 			});
+		
 		};
 
 		$scope.goSignup = function () {

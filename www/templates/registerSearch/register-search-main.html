@@ -1,23 +1,27 @@
 <ion-view view-title="책 검색">
+<ion-nav-bar class="bar">
+	<ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
 <ion-content id="registerSearchMain">
 
-<div class="list">
+	<div class="list">
 
-  	<div class="item item-input-inset">
-    	<label class="item-input-wrapper">
-      		<i class="icon ion-ios-search placeholder-icon"></i>
-    		<input type="search" placeholder="등록하고 싶은 책을 검색해보세요." type="text" ng-model="data.bookName">
-    	</label>
-    	<button class="button" ng-click="searchBooks()">검색</button>
-  </div>
+	  	<div class="item item-input-inset">
+	    	<label class="item-input-wrapper">
+	      		<i class="icon ion-ios-search placeholder-icon"></i>
+	    		<input type="search" placeholder="등록하고 싶은 책을 검색해보세요." type="text" ng-model="data.bookName">
+	    	</label>
+	    	<button class="button" ng-click="searchBooks()">검색</button>
+	  </div>
 
-  	<a class="item item-thumbnail-left" ng-repeat="book in bookList" ng-click="goSearchDetail(book)">
-      	<img ng-src="{{book.image}}">
-      	<h2 ng-bind-html="book.title"></h2>
-      	<p ng-bind-html="book.author"></p>
-    </a>
+	  	<a class="item item-thumbnail-left" ng-repeat="book in bookList" ng-click="goSearchDetail(book)">
+	      	<img ng-src="{{book.image}}">
+	      	<h2 ng-bind-html="book.title"></h2>
+	      	<p ng-bind-html="book.author"></p>
+	    </a>
 
-</div>
+	</div>
 
 </ion-content>
 </ion-view>

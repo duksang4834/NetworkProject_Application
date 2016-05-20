@@ -1,11 +1,12 @@
 angular.module('bookApp.controllers')
 
-  	.controller('RegisterSearchMainCtrl', function($scope, $state, $http, $rootScope) {
+  	.controller('RegisterSearchMainCtrl', function($scope, $state, $http, $rootScope, Api) {
   		var naverAPIKey = 'c1b406b32dbbbbeee5f2a36ddc14067f',
   			x2js = new X2JS();
 
   		$scope.data = {
-  			bookName: ''
+  			bookName: '',
+  			display: 10
   		};
 
 	  	$scope.goMainList = function () {
@@ -23,23 +24,9 @@ angular.module('bookApp.controllers')
 			if (!$scope.data.bookName) {
 				// error
 			} else {
-				$http({
-					method: 'GET',
-					url: url,
-					headers: {
-						'X-Naver-Client-Id': '3ENQzgkibzsEXbOY3sqy',
-						'X-Naver-Client-Secret': '9UTN7mBN5W',
-						'Content-Type': 'application/xml'
-					},
-					params: {
-						target: 'book',
-						query: $scope.data.bookName,
-						display: 10
-					}
-				}).success(function (response) {
+				Api.searchBook($scope.data).success(function (response) {
 					var xmlText = response;
 					$scope.bookList = x2js.xml_str2json( xmlText ).rss.channel.item;
-					console.log($scope.bookList);
 				}).error(function (error) {
 
 				});

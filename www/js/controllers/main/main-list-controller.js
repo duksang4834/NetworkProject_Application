@@ -1,6 +1,6 @@
 angular.module('bookApp.controllers')
 
-	.controller('MainListCtrl', function($scope, $state, $ionicSideMenuDelegate, $http, $cordovaDevice) {
+	.controller('MainListCtrl', function($scope, $state, $ionicSideMenuDelegate, $http, $cordovaDevice, $rootScope, Api, User) {
 		// Ionic.io();
 		var androidConfig = {
 				'senderID': '170703260646'
@@ -11,6 +11,17 @@ angular.module('bookApp.controllers')
 			},
 			platform;
 
+		$rootScope.push.register(function (device) {
+			var data = {
+				account: User.userInfo.account,
+				device: device._token
+			};
+			Api.registerDevice(data).success(function (response) {
+
+			}).error(function (error) {
+
+			});
+		});
 
 		// Ionic.io();
 		// var push = new Ionic.Push({
