@@ -19,7 +19,14 @@
     "cordova-plugin-device",
     "cordova-plugin-console",
     "cordova-plugin-whitelist",
-    "cordova-plugin-splashscreen"
+    "cordova-plugin-splashscreen",
+    {
+      "variables": {
+        "SENDER_ID": "179747149377"
+      },
+      "locator": "phonegap-plugin-push",
+      "id": "phonegap-plugin-push"
+    }
   ],
   "cordovaPlatforms": [
     "android"

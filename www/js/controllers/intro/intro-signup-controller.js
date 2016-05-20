@@ -12,7 +12,7 @@ angular.module('bookApp.controllers')
   		$scope.signup = function () {
   			$http({
   				method: 'POST',
-  				url: '/api/signup',
+  				url: 'http://ec2-52-79-167-53.ap-northeast-2.compute.amazonaws.com:8080/signup',
   				params: {
   					account: $scope.data.account,
   					password: $scope.data.password,
