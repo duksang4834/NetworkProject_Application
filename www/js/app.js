@@ -21,14 +21,6 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
-    // Ionic.io();
-    // var push = new Ionic.Push({
-    //   'onNotification': function () {
-
-    //   }
-    // });
-
   });
 })
 
