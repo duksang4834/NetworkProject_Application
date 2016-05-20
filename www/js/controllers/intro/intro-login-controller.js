@@ -1,15 +1,31 @@
 angular.module('bookApp.controllers')
 
-	.controller('IntroLoginCtrl', function ($scope, $state, $http, Api, User) {
+	.controller('IntroLoginCtrl', function ($scope, $state, $http, Api, User, Util) {
 
 		$scope.data = {
-			account: '',
-			password: ''
+			account: undefined,
+			password: undefined
 		};
+
+		function init () {
+			var loginData = {
+				account: Util.localStorage.get('account'),
+				password: Util.localStorage.get('password')
+			}
+
+			if (loginData.account) {
+				$scope.data = loginData;
+				$scope.goMain();
+			}
+		}
 
 		$scope.goMain = function () {
 
 			Api.login($scope.data).success(function (response1) {
+				
+				Util.localStorage.set('account', $scope.data.account);
+				Util.localStorage.set('password', $scope.data.password);
+
 				Api.getUserInfo($scope.data).success(function (response2) {
 					User.userInfo = response2;
 					console.log(User.userInfo);
@@ -27,4 +43,5 @@ angular.module('bookApp.controllers')
 			$state.go('intro.signup');
 		};
 
+		// init();
 	});

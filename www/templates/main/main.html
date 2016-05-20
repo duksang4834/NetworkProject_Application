@@ -5,8 +5,8 @@
 		<ion-side-menu side="left"></ion-side-menu>
 
 			<ion-nav-bar></ion-nav-bar>
-				<div id="add-button1" class="button button-small button-icon icon icon-center ion-plus" ng-click="goRegisterSearch()"></div>
-			    <div id="add-button2" class="button button-small button-icon icon ion-android-search" ng-click="goRentSearch()"></div>
+				<div id="add-button1" class="button button-small button-icon icon icon-center ion-plus" ng-click="goRegisterSearch()" ng-show="$state.current.name === 'main.list'"></div>
+			    <div id="add-button2" class="button button-small button-icon icon ion-android-search" ng-click="goRentSearch()" ng-show="$state.current.name === 'main.list'"></div>
 			<ion-nav-view name="mainContent">
 			
 			</ion-nav-view>

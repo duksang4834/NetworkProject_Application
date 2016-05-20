@@ -22,12 +22,12 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
       StatusBar.styleDefault();
     }
 
-    // Ionic.io();
-    // $rootScope.push = new Ionic.Push({
-    //   'onNotification': function (notification) {
+    Ionic.io();
+    $rootScope.push = new Ionic.Push({
+      'onNotification': function (notification) {
 
-    //   }
-    // });
+      }
+    });
   });
 })
 
@@ -68,6 +68,7 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
   .state('main', {
     url: '/main',
     abstract: true,
+    cache: false,
     templateUrl: 'templates/main/main.html',
     controller: 'MainCtrl'
   })
@@ -102,59 +103,27 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
     }
   })
 
-  // .state('rentSearch', {
-  //   url: '/rentSearch',
-  //   abstract: true,
-  //   templateUrl: 'templates/rentSearch/rent-se.html',
-  //   controller: 'RentSearchCtrl'
-  // })
-
-  // .state('rentSearch.Main', {
-  //   url: '/rentSearchMain',
-  //   views: {
-  //     'rentSearchContent': {
-  //       templateUrl: 'templates/rentSearch/rent-search-main.html',
-  //       controller: 'RentSearchMainCtrl'
-  //     }
-  //   }
-  // })
-
-  // .state('rentSearch.Detail', {
-  //   url: '/rentSearchDetail',
-  //   views: {
-  //     'rentSearchContent': {
-  //       templateUrl: 'templates/rentSearch/rent-search-detail.html',
-  //       controller: 'RentSearchDetailCtrl'
-  //     }
-  //   }
-  // })
-
-  .state('registerSearch', {
-    url: '/registerSearch',
-    abstract: true,
-    templateUrl: 'templates/registerSearch/register-search.html',
-    controller: 'RegisterSearchCtrl'
-  })
-
-  .state('registerSearch.Main', {
-    url: '/registerSearchMain',
+  .state('main.rentSearch', {
+    url: '/rentSearch',
     views: {
-      'registerSearchContent': {
-        templateUrl: 'templates/registerSearch/register-search-main.html',
-        controller: 'RegisterSearchMainCtrl'
+      'mainContent': {
+        templateUrl: 'templates/rentSearch/rent-search-main.html',
+        controller: 'RentSearchMainCtrl'
       }
     }
   })
 
-  .state('registerSearch.Detail', {
-    url: '/registerSearchDetail',
+  .state('main.rentSearchDetail', {
+    url: '/rentSearchDetail',
     views: {
-      'registerSearchContent': {
-        templateUrl: 'templates/registerSearch/register-search-detail.html',
-        controller: 'RegisterSearchDetailCtrl'
+      'mainContent': {
+        templateUrl: 'templates/rentSearch/rent-search-detail.html',
+        controller: 'RentSearchDetailCtrl'
       }
     }
   })
+
+
 
   .state('bookDetail', {
     url: '/bookDetail',
