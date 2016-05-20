@@ -21,33 +21,6 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
-    // document.addEventListener("deviceready", function(){
-    //   $cordovaPush.
-    // };
-
-    // document.addEventListener("deviceready", function(){
-    //   $rootScope.$on('$cordovaPush:notificationReceived', function (event, notification) {
-
-    //     if (notification.alert) {
-    //       navigator.notification.alert(notification.alert);
-    //     }
-
-    //     if (notification.sound) {
-    //       var snd = new Media(event.sound);
-    //       snd.play();
-    //     }
-
-    //     if (notification.badge) {
-    //       $cordovaPush.setBadgeNumber(notification.badge).then(function(result) {
-    //         // Success!
-    //       }, function(err) {
-    //         // An error occurred. Show a message to the user
-    //       });
-    //     }
-
-    //   });
-    // });
   });
 })
 
