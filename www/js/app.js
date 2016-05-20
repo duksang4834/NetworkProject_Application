@@ -28,8 +28,6 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
 
       }
     });
-
-
   });
 })
 
