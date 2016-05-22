@@ -9800,6 +9800,39 @@ a.button {
   text-decoration: underline;
   color: #878787; }
 
+#login .book-icon {
+  position: fixed;
+  right: 5%;
+  /*		border-radius: 50%;*/
+  width: 210px;
+  height: 210px;
+  /*		line-height: 47px;*/
+  z-index: 10;
+  /*		border: 3px solid black;*/
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-size: 130px;
+  margin-top: 50px;
+  margin-right: 50px; }
+
+#login .book-now {
+  font-size: 20px;
+  color: black;
+  margin-top: 20px; }
+
+#login .col {
+  border: 5px solid white; }
+
+#login .row {
+  border: 1px solid white; }
+
+#login .button {
+  border: 1px solid white; }
+
+#login .button-full {
+  border: solid white; }
+
 #signup .scroll {
   height: 100%;
   padding: 10px; }
@@ -9807,10 +9840,37 @@ a.button {
 #signup .container {
   padding-top: 26px; }
 
+#main-side {
+  /*background-color: #5B7065;*/ }
+  #main-side .user-image {
+    margin-top: 30px;
+    margin-left: 74px;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: white; }
+  #main-side .user-name {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 15px;
+    /*color: white;*/ }
+  #main-side .user-account {
+    text-align: center;
+    margin-bottom: 30px;
+    /*color: white;*/ }
+  #main-side .logout-button {
+    position: absolute;
+    align-self: center;
+    padding-left: 95px;
+    padding-top: 300px;
+    /*color: white;*/ }
+  #main-side .user-own {
+    /*background-color: #C9D1C8;*/ }
+
 #add-button1 {
   position: fixed;
   right: 5%;
-  margin-top: 410px;
+  margin-top: 440px;
   border-radius: 50%;
   width: 56px;
   height: 56px;
@@ -9819,13 +9879,14 @@ a.button {
   border: 1px solid black;
   text-align: center;
   font-size: 24px;
-  background-color: #CFB57C;
-  padding-top: 15px; }
+  background-color: #387EF5;
+  padding-top: 15px;
+  color: white; }
 
 #add-button2 {
   position: fixed;
   right: 5%;
-  margin-top: 480px;
+  margin-top: 510px;
   border-radius: 50%;
   width: 56px;
   height: 56px;
@@ -9834,8 +9895,9 @@ a.button {
   border: 1px solid black;
   text-align: center;
   font-size: 24px;
-  background-color: #CFB57C;
-  padding-top: 15px; }
+  background-color: #387EF5;
+  padding-top: 15px;
+  color: white; }
 
 #main-list .card {
   position: relative; }
@@ -9846,20 +9908,11 @@ a.button {
 #main-list .ion-android-search {
   color: black; }
 
-#main-list .bar-header {
-  background-color: #041435;
-  top: 30px; }
-
-/*.item-input-inset {
-  padding-top: 53px; }*/
-
 #main-list .item-divider {
-  background-color: #012D44;
-  color: white;
   margin-top: -2px; }
 
-#main-list .bar-header {
-  background-color: red; }
+.item-input-inset {
+  padding-top: 53px; }
 
 #signup .scroll {
   height: 100%;
