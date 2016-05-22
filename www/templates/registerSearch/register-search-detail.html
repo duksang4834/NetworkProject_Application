@@ -1,16 +1,65 @@
-<ion-view view-title="{{item.title}}">
-<ion-nav-bar class="bar">
-	<ion-nav-back-button>
-  </ion-nav-back-button>
-</ion-nav-bar>
-<ion-content id="registerSearchDetail">
+<ion-modal-view view-title="{{item.title}}">
+	
+	<ion-header-bar>
+    	<h1 class="title">책 등록</h1>
+    	<div class="buttons">
+	        <button class="button button-icon ion-close-round" ng-click="modal.hide()">
+	        </button>
+	      </div>
+    </ion-header-bar>
 
-<!-- <div class="bar bar-header">
-  <button class="button button-icon icon ion-chevron-left" ng-click="goRegisterSearchMain()"></button>
-  <div class="title">{{item.title}}</div>
-</div>
- -->
-<button class="button button-full" ng-click="registerBook()">책 등록</button>
+	<ion-content id="register-search-detail">
 
-</ion-content>
-</ion-view>
+		<div class="content-header">
+			<img ng-src="{{book.image}}">
+			<div class="book-title" ng-bind-html="book.title"></div>
+		</div>
+
+		<div class="content-body">
+			<div class="list">
+
+		  		<div class="item">
+		    		저자
+		    		<span class="item-note" ng-bind-html="book.author"></span>
+		  		</div>
+
+		  		<label class="item item-input">
+    				<span class="input-label">책 가격 (원/하루)</span>
+    				<input type="text" placeholder="가격" ng-model="data.price">
+  				</label>
+
+		  		<label class="item item-input item-select">
+		    		<div class="input-label">
+			      		책 상태
+			    	</div>
+			    	<select ng-options="item as item.label for item in options.cleanness track by item.id" ng-model="data.cleanness">
+		    		</select>
+		  		</label>
+
+		  		<div class="duration">
+		  			<div class="duration-text">대여기간</div>
+		  			<div class="duration-start">
+			  			<select ng-options="item as item.label for item in options.year track by item.id" ng-model="data.startYear"></select>
+			  			년
+			  			<select ng-options="item as item.label for item in options.month track by item.id" ng-model="data.startMonth"></select>
+			  			월
+			  			<select ng-options="item as item.label for item in options.date track by item.id" ng-model="data.startDate"></select>일 부터
+		  			</div>
+		  			<div class="duration-end">
+		  				<select ng-options="item as item.label for item in options.year track by item.id" ng-model="data.endYear"></select>
+			  			년
+			  			<select ng-options="item as item.label for item in options.month track by item.id" ng-model="data.endMonth"></select>
+			  			월
+			  			<select ng-options="item as item.label for item in options.date track by item.id" ng-model="data.endDate"></select>일 까지
+		  			</div>
+				</div>
+			</div>
+		</div>
+
+	</ion-content>
+
+	<ion-footer-bar class="bar-positive text-center" ng-click="registerBook()">
+		<h1 class="title">책 등록</h1>
+	</ion-footer-bar>
+
+</ion-modal-view>

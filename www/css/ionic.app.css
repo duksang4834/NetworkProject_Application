@@ -9807,6 +9807,9 @@ a.button {
 #signup .container {
   padding-top: 26px; }
 
+#main-side .item-avatar {
+  color: red; }
+
 #add-button1 {
   position: fixed;
   right: 5%;
@@ -9819,8 +9822,9 @@ a.button {
   border: 1px solid black;
   text-align: center;
   font-size: 24px;
-  background-color: #CFB57C;
-  padding-top: 15px; }
+  background-color: #000000;
+  padding-top: 15px;
+  color: white; }
 
 #add-button2 {
   position: fixed;
@@ -9834,8 +9838,9 @@ a.button {
   border: 1px solid black;
   text-align: center;
   font-size: 24px;
-  background-color: #CFB57C;
-  padding-top: 15px; }
+  background-color: #000000;
+  padding-top: 15px;
+  color: white; }
 
 #main-list .card {
   position: relative; }
@@ -9850,16 +9855,43 @@ a.button {
   background-color: #041435;
   top: 30px; }
 
-/*.item-input-inset {
-  padding-top: 53px; }*/
-
 #main-list .item-divider {
-  background-color: #012D44;
-  color: white;
+  background-color: #26ADE4;
+  color: black;
   margin-top: -2px; }
 
-#main-list .bar-header {
-  background-color: red; }
+#main-list .bar {
+  background-color: blue; }
+
+#main-list .scroll-content {
+  margin-top: -18px; }
+
+#rentSearchDetail .spinner svg {
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 14px);
+  z-index: 10; }
+
+#register-search-detail .scroll {
+  height: 100%; }
+
+#register-search-detail .content-header {
+  height: 180px;
+  text-align: center; }
+  #register-search-detail .content-header .book-title {
+    height: 40px;
+    white-space: normal;
+    padding-left: 8px;
+    padding-right: 8px; }
+
+#register-search-detail .content-body {
+  height: calc(100% - 180px); }
+  #register-search-detail .content-body .item {
+    border-top: 0px;
+    border-bottom: 0px; }
+  #register-search-detail .content-body .duration {
+    padding-left: 16px;
+    padding-top: 16px; }
 
 #signup .scroll {
   height: 100%;

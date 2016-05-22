@@ -25,7 +25,7 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
     Ionic.io();
     $rootScope.push = new Ionic.Push({
       'onNotification': function (notification) {
-
+        console.log(notification);
       }
     });
   });
@@ -75,6 +75,7 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
 
   .state('main.list', {
     url: '/list',
+    cache: false,
     views: {
       'mainContent': {
         templateUrl: 'templates/main/main-list.html',
@@ -93,15 +94,15 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
     }
   })
 
-  .state('main.registerSearchDetail', {
-    url: '/registerSearchDetail',
-    views: {
-      'mainContent': {
-        templateUrl: 'templates/registerSearch/register-search-detail.html',
-        controller: 'RegisterSearchDetailCtrl'
-      }
-    }
-  })
+  // .state('main.registerSearchDetail', {
+  //   url: '/registerSearchDetail',
+  //   views: {
+  //     'mainContent': {
+  //       templateUrl: 'templates/registerSearch/register-search-detail.html',
+  //       controller: 'RegisterSearchDetailCtrl'
+  //     }
+  //   }
+  // })
 
   .state('main.rentSearch', {
     url: '/rentSearch',
@@ -111,56 +112,17 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
         controller: 'RentSearchMainCtrl'
       }
     }
-  })
-
-  .state('main.rentSearchDetail', {
-    url: '/rentSearchDetail',
-    views: {
-      'mainContent': {
-        templateUrl: 'templates/rentSearch/rent-search-detail.html',
-        controller: 'RentSearchDetailCtrl'
-      }
-    }
-  })
-
-
-
-  .state('bookDetail', {
-    url: '/bookDetail',
-    abstract: true,
-    templateUrl: 'templates/bookDetail/book-detail.html',
-    controller: 'BookDetailCtrl'
-  })
-
-  .state('bookDetail.1', {
-    url: '/1',
-    views: {
-      'bookDetailContent': {
-        templateUrl: 'templates/bookDetail/book-detail-1.html',
-        controller: 'BookDetailCtrl1'
-      }
-    }
-  })
-
-  .state('bookDetail.2', {
-    url: '/2',
-    views: {
-      'bookDetailContent': {
-        templateUrl: 'templates/bookDetail/book-detail-2.html',
-        controller: 'BookDetailCtrl2'
-      }
-    }
-  })
-
-  .state('bookDetail.3', {
-    url: '/3',
-    views: {
-      'bookDetailContent': {
-        templateUrl: 'templates/bookDetail/book-detail-3.html',
-        controller: 'BookDetailCtrl3'
-      }
-    }
   });
+
+  // .state('main.rentSearchDetail', {
+  //   url: '/rentSearchDetail',
+  //   views: {
+  //     'mainContent': {
+  //       templateUrl: 'templates/rentSearch/rent-search-detail.html',
+  //       controller: 'RentSearchDetailCtrl'
+  //     }
+  //   }
+  // })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/intro/login');
