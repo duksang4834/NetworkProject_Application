@@ -43,5 +43,5 @@ angular.module('bookApp.controllers')
 			$state.go('intro.signup');
 		};
 
-		// init();
+		init();
 	});

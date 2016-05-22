@@ -112,7 +112,7 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
         controller: 'RentSearchMainCtrl'
       }
     }
-  })
+  });
 
   // .state('main.rentSearchDetail', {
   //   url: '/rentSearchDetail',
@@ -123,45 +123,6 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
   //     }
   //   }
   // })
-
-
-
-  .state('bookDetail', {
-    url: '/bookDetail',
-    abstract: true,
-    templateUrl: 'templates/bookDetail/book-detail.html',
-    controller: 'BookDetailCtrl'
-  })
-
-  .state('bookDetail.1', {
-    url: '/1',
-    views: {
-      'bookDetailContent': {
-        templateUrl: 'templates/bookDetail/book-detail-1.html',
-        controller: 'BookDetailCtrl1'
-      }
-    }
-  })
-
-  .state('bookDetail.2', {
-    url: '/2',
-    views: {
-      'bookDetailContent': {
-        templateUrl: 'templates/bookDetail/book-detail-2.html',
-        controller: 'BookDetailCtrl2'
-      }
-    }
-  })
-
-  .state('bookDetail.3', {
-    url: '/3',
-    views: {
-      'bookDetailContent': {
-        templateUrl: 'templates/bookDetail/book-detail-3.html',
-        controller: 'BookDetailCtrl3'
-      }
-    }
-  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/intro/login');
