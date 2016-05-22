@@ -1,12 +1,14 @@
-<ion-view view-title="대여가능 책">
-	<ion-nav-bar class="bar">
-		<ion-nav-back-button>
-  		</ion-nav-back-button>
-	</ion-nav-bar>
+<ion-modal-view id="rentSearchDetail">
+	<ion-header-bar>
+    	<h1 class="title">대여가능 책</h1>
+    	<div class="buttons">
+	        <button class="button button-icon ion-close-round" ng-click="modal.hide()">
+	        </button>
+	      </div>
+    </ion-header-bar>
+	<ion-spinner class="ios" ng-if="isLoading"></ion-spinner>
 
-	<ion-content id="rentSearchDetail">
-
-		<ion-spinner class="ios" ng-if="isLoading"></ion-spinner>
+	<ion-content>
 
 		<div class="list">
 			<a class="item item-thumbnail-left" ng-repeat="book in books" ng-click="borrowBook(book)">
@@ -17,4 +19,5 @@
 		</div>		
 
 	</ion-content>
-</ion-view>
+
+</ion-modal-view>
