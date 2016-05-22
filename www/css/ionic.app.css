@@ -9807,11 +9807,8 @@ a.button {
 #signup .container {
   padding-top: 26px; }
 
-#main-side {
-  padding: 10px; }
-  #main-side ion-item.item.user-profile {
-    padding: 30px;
-    text-align: center; }
+#main-side .item-avatar {
+  color: red; }
 
 #add-button1 {
   position: fixed;
