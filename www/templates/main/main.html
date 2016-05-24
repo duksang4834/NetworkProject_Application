@@ -14,13 +14,16 @@
 
 	<ion-side-menu side="left">
 		<ion-content id="main-side">
-			<ion-list>
-				<ion-item class="item user-profile">
-    				<img src="https://cdn3.iconfinder.com/data/icons/sympletts-part-3/128/circle-user-man-128.png">
-    				<br><br><br><h2 style="text-align:center">name</h2>
-    				<p style="text-align:center">account</p><br>
+			<ion-list class="user-profile">
+				<ion-item class="item user-own">
+    				<img class="full-image user-image" src="https://cdn3.iconfinder.com/data/icons/sympletts-part-3/128/circle-user-man-128.png">
+    				<h2 class="user-name">name</h2>
+    				<p class="user-account">account</p>
 				</ion-item>
-				<ion-item menu-close ng-click="goLogout()">logout</ion-item>
+				<!-- <ion-item menu-close ng-click="goLogout()" class="icon icon-right ion-log-out"> logout</ion-item> -->
+
+				<button class="button button-icon icon ion-log-out logout-button" ng-click="goLogout()">   Logout</button>
+
 			</ion-list>
 		</ion-content>
 	</ion-side-menu>

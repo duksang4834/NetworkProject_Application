@@ -1,7 +1,7 @@
 #add-button1 {
 			position: fixed;
 			right: 5%;
-			margin-top: 410px;
+			margin-top: 440px;
 			border-radius: 50%;
 			width: 56px;
 			height: 56px;
@@ -10,7 +10,7 @@
 			border: 1px solid black;
 			text-align: center;
 			font-size: 24px;
-			background-color: #000000;
+			background-color: #387EF5;
 			padding-top: 15px;
 			color: white;
 		}
@@ -18,7 +18,7 @@
 		#add-button2 {
 			position: fixed;
 			right: 5%;
-			margin-top: 480px;
+			margin-top: 510px;
 			border-radius: 50%;
 			width: 56px;
 			height: 56px;
@@ -27,7 +27,7 @@
 			border: 1px solid black;
 			text-align: center;
 			font-size: 24px;
-			background-color: #000000;
+			background-color: #387EF5;
 			padding-top: 15px;
 			color: white;
 		}
@@ -36,9 +36,7 @@
 	.card {
 		position: relative;
 	}
-
 	
-
 		.ion-plus{
 			color: black;
 		}
@@ -47,23 +45,18 @@
 			color: black;
 		}
 
-		.bar-header{
-			background-color: #041435;
-			top: 30px;
-		}
-
 		.item-divider{
-			background-color: #26ADE4;
-			color: black;
-			margin-top: -2px;
-		}
 
+/*<<<<<<< HEAD*/
+			margin-top: -2px;
+/*=======
 		.bar{
 			background-color: blue;
 		}
 
 		.scroll-content{
 			margin-top: -18px;
+>>>>>>> upstream/master*/
 		}
 }
 
