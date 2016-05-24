@@ -1,6 +1,16 @@
 {
   "name": "Network_APP",
   "app_id": "4c4deaa2",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://ec2-52-79-167-53.ap-northeast-2.compute.amazonaws.com:8080"
+    },
+    {
+      "path": "/book",
+      "proxyUrl": "https://openapi.naver.com/v1/search/book.xml"
+    }
+  ],
   "gulpStartupTasks": [
     "sass",
     "watch"
@@ -8,12 +18,5 @@
   "watchPatterns": [
     "www/**/*",
     "!www/lib/**/*"
-  ],
-  "browsers": [
-    {
-      "platform": "android",
-      "browser": "crosswalk",
-      "version": "10.39.235.15"
-    }
   ]
 }
