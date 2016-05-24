@@ -1,6 +1,39 @@
 #main-side{
-	.item-avatar{
-		color:red;
+
+	/*background-color: #5B7065;*/
+
+	.user-image{
+		margin-top: 30px;
+		margin-left: 74px;
+		align-items: center;
+		height: 100px;
+		width: 100px;
+		background-color: white
+	}
+
+	.user-name{
+		text-align:center;
+		font-size: 30px;
+		padding-top: 15px;
+		/*color: white;*/
+	}
+
+	.user-account{
+		text-align:center;
+		margin-bottom: 30px;
+		/*color: white;*/
+	}
+
+	.logout-button{
+		position: absolute;
+		align-self: center;
+		padding-left: 95px;
+		padding-top: 300px;
+		/*color: white;*/
+	}
+
+	.user-own{
+		/*background-color: #C9D1C8;*/
 	}
 
 }
