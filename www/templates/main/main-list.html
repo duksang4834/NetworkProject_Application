@@ -7,65 +7,54 @@
   
   <div class="card">
    
-  <!-- type 1 --> 
-  <div class="item item-divider">
-    대여가능
-  </div>
-  <div class="item item-text-wrap">
-    <div class="list">
-    <a class="item item-thumbnail-left" href="#">
-      <img src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-with-cordova-geolocation-background-plugin/icon.png">
-      <h2>Pretty Hate Machine</h2>
-      <p>Nine Inch Nails</p>
-    </a>
-  </div>
-  </div>
-  <div class="item item-text-wrap">
-    <div class="list">
-    <a class="item item-thumbnail-left" href="#">
-      <img src="adam.png">
-      <h2>Pretty Hate Machine</h2>
-      <p>Nine Inch Nails</p>
-    </a>
-  </div>
-  </div>
-
-  <!-- type 2 --> 
-  <div class="item item-divider">
-    대여 중
-  </div>
-  <div class="item item-text-wrap">
-    <div class="list">
-    <a class="item item-thumbnail-left" href="#">
-      <img src="adam.png">
-      <h2>Pretty Hate Machine</h2>
-      <p>Nine Inch Nails</p>
-    </a>
-  </div>
-  </div>
-
-  <!-- type 3 --> 
-  <div class="item item-divider">
-    빌린 책
-  </div>
-  <div class="item item-text-wrap">
-    <div class="list">
-    <a class="item item-thumbnail-left" href="#">
-      <img src="adam.png">
-      <h2>Pretty Hate Machine</h2>
-      <p>Nine Inch Nails</p>
-    </a>
-  </div>
-  </div>
-  <div class="item item-text-wrap">
-    <div class="list">
-    <a class="item item-thumbnail-left" href="#">
-      <img src="adam.png">
-      <h2>Pretty Hate Machine</h2>
-      <p>Nine Inch Nails</p>
-    </a>
-  </div>
-  </div>
+    <!-- type 1 --> 
+    <div class="item item-divider">
+      대여가능
     </div>
+    <div class="item item-text-wrap">
+      <div class="list">
+        
+        <a class="item item-thumbnail-left" ng-repeat="availbook in items.avail">
+          <img ng-src="{{availbook.image}}">
+          <h2 ng-bind-html="availbook.title"></h2>
+          <p ng-bind-html="availbook.author"></p>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- type 2 --> 
+    <div class="item item-divider">
+      대여 중
+    </div>
+    <div class="item item-text-wrap">
+      <div class="list">
+      
+        <a class="item item-thumbnail-left" ng-repeat="lentbook in items.lent">
+          <img ng-src="{{lentbook.image}}">
+          <h2 ng-bind-html="lentbook.title"></h2>
+          <p ng-bind-html="lentbook.author"></p>
+        </a>
+    
+      </div>
+    </div>
+
+    <!-- type 3 --> 
+    <div class="item item-divider">
+      빌린 책
+    </div>
+    <div class="item item-text-wrap">
+      <div class="list">
+      
+        <a class="item item-thumbnail-left" ng-repeat="borrowbook in items.borrow">
+          <img ng-src="{{borrowbook.image}}">
+          <h2 ng-bind-html="borrowbook.title"></h2>
+          <p ng-bind-html="borrowbook.author"></p>
+        </a>
+
+      </div>
+    </div>
+  
+  </div>
 </ion-content>
 </ion-view>

@@ -1,0 +1,9 @@
+#rentSearchDetail {
+
+	.spinner svg {
+		position: absolute;
+		top: calc(50% - 14px);
+		left: calc(50% - 14px);
+		z-index: 10;
+	}
+}
