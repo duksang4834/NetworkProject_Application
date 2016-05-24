@@ -1,0 +1,42 @@
+<ion-view view-title="대여가능 책">
+
+	<ion-nav-bar class="bar">
+		<ion-nav-back-button>
+	  </ion-nav-back-button>
+	</ion-nav-bar>
+
+	<ion-content id="mybook-available">
+		
+		<div class="content-header">
+			<img ng-src="{{book.image}}">
+			<div class="book-title" ng-bind-html="book.title"></div>
+		</div>
+
+		<div class="content-body">
+			<div class="list">
+
+		  		<div class="item">
+		    		저자
+		    		<span class="item-note" ng-bind-html="book.author"></span>
+		  		</div>
+
+		  		<div class="item item-input">
+    				<span class="input-label">책 가격 (원/하루)</span>
+    				<span class="item-note" ng-model="data.price">
+  				</div>
+
+		  		<div class="item item-input item-select">
+		    		<div class="input-label">
+			      		책 상태
+			    	</div>
+			    	<span class="item-note" ng-model="data.cleanness">
+		    		</span>
+		  		</div>
+
+			</div>
+			<button class="button button-full button-positive" ng-click="showPeople()" ng-style="{'z-index': 10}">대여요청 보기</button>
+		</div>
+
+	<ion-content>
+
+</ion-view>

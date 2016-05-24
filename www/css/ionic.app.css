@@ -9840,7 +9840,6 @@ a.button {
 #signup .container {
   padding-top: 26px; }
 
-<<<<<<< HEAD
 #main-side {
   /*background-color: #5B7065;*/ }
   #main-side .user-image {
@@ -9867,53 +9866,64 @@ a.button {
     /*color: white;*/ }
   #main-side .user-own {
     /*background-color: #C9D1C8;*/ }
-=======
-#main-side .item-avatar {
-  color: red; }
->>>>>>> upstream/master
 
 #add-button1 {
   position: fixed;
   right: 5%;
-  margin-top: 440px;
+  bottom: 100px;
   border-radius: 50%;
   width: 56px;
   height: 56px;
   line-height: 47px;
   z-index: 10;
-  border: 1px solid black;
+  border: 0px;
   text-align: center;
   font-size: 24px;
-<<<<<<< HEAD
   background-color: #387EF5;
-=======
-  background-color: #000000;
->>>>>>> upstream/master
   padding-top: 15px;
   color: white; }
 
 #add-button2 {
   position: fixed;
   right: 5%;
-  margin-top: 510px;
+  bottom: 30px;
   border-radius: 50%;
   width: 56px;
   height: 56px;
   line-height: 47px;
   z-index: 10;
-  border: 1px solid black;
+  border: 0px;
   text-align: center;
   font-size: 24px;
-<<<<<<< HEAD
   background-color: #387EF5;
-=======
-  background-color: #000000;
->>>>>>> upstream/master
   padding-top: 15px;
   color: white; }
 
 #main-list .card {
   position: relative; }
+  #main-list .card .item {
+    position: relative; }
+    #main-list .card .item .alarm {
+      position: absolute;
+      top: 8px;
+      right: 4px; }
+      #main-list .card .item .alarm .alarm-image {
+        font-size: 30px; }
+      #main-list .card .item .alarm .alarm-badge {
+        display: block;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        text-align: center;
+        font-size: 16px;
+        position: absolute;
+        top: 0px;
+        right: -6px;
+        color: #FFFFFF;
+        z-index: 10;
+        border-radius: 50%;
+        border: 1px solid #777;
+        background-color: #777; }
 
 #main-list .ion-plus {
   color: black; }
@@ -9921,27 +9931,37 @@ a.button {
 #main-list .ion-android-search {
   color: black; }
 
-<<<<<<< HEAD
 #main-list .item-divider {
-  margin-top: -2px; }
+  /*<<<<<<< HEAD*/
+  margin-top: -2px;
+  /*=======
+		.bar{
+			background-color: blue;
+		}
 
-.item-input-inset {
-  padding-top: 53px; }
-=======
-#main-list .bar-header {
-  background-color: #041435;
-  top: 30px; }
+		.scroll-content{
+			margin-top: -18px;
+>>>>>>> upstream/master*/ }
 
-#main-list .item-divider {
-  background-color: #26ADE4;
-  color: black;
-  margin-top: -2px; }
-
-#main-list .bar {
-  background-color: blue; }
-
-#main-list .scroll-content {
-  margin-top: -18px; }
+#mybook-detail .item {
+  height: 90px;
+  transition: height 0.5s ease; }
+  #mybook-detail .item.clicked {
+    height: 120px;
+    transition: height 0.5s ease; }
+  #mybook-detail .item .button-container .button-custom {
+    display: inline-block;
+    width: 49%;
+    height: 40px;
+    border-radius: 4px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #FFF;
+    text-align: center; }
+    #mybook-detail .item .button-container .button-custom.reject {
+      background-color: #878787; }
+    #mybook-detail .item .button-container .button-custom.accept {
+      background-color: blue; }
 
 #rentSearchDetail .spinner svg {
   position: absolute;
@@ -9949,27 +9969,26 @@ a.button {
   left: calc(50% - 14px);
   z-index: 10; }
 
-#register-search-detail .scroll {
+#register-search-detail .scroll, #mybook-available .scroll {
   height: 100%; }
 
-#register-search-detail .content-header {
+#register-search-detail .content-header, #mybook-available .content-header {
   height: 180px;
   text-align: center; }
-  #register-search-detail .content-header .book-title {
+  #register-search-detail .content-header .book-title, #mybook-available .content-header .book-title {
     height: 40px;
     white-space: normal;
     padding-left: 8px;
     padding-right: 8px; }
 
-#register-search-detail .content-body {
+#register-search-detail .content-body, #mybook-available .content-body {
   height: calc(100% - 180px); }
-  #register-search-detail .content-body .item {
+  #register-search-detail .content-body .item, #mybook-available .content-body .item {
     border-top: 0px;
     border-bottom: 0px; }
-  #register-search-detail .content-body .duration {
+  #register-search-detail .content-body .duration, #mybook-available .content-body .duration {
     padding-left: 16px;
     padding-top: 16px; }
->>>>>>> upstream/master
 
 #signup .scroll {
   height: 100%;

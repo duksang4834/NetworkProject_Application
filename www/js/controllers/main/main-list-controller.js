@@ -1,15 +1,15 @@
 angular.module('bookApp.controllers')
 
-	.controller('MainListCtrl', function($scope, $state, $ionicSideMenuDelegate, $http, $cordovaDevice, $rootScope, Api, User) {
+	.controller('MainListCtrl', function($scope, $state, $ionicSideMenuDelegate, $http, $cordovaDevice, $rootScope, Api, User, $ionicPopup) {
 
 		Api.searchMyBook().success(function (response) {
 			$scope.items = response;
-			console.log($scope.items);
 		}).error(function (err) {
 			if(err) {
 				console.log(err)
 			}
-		})
+		});
+		
 		$rootScope.push.register(function (device) {
 			var data = {
 				account: User.userInfo.account,
@@ -26,9 +26,8 @@ angular.module('bookApp.controllers')
     		$ionicSideMenuDelegate.toggleLeft();
   		};
 
-  		// $scope.moveScroll = function (e) {
-  		// 	var position = e.detail.scrollTop,
-  		// 	target = document.getElementById('add-button1');
-  		// 	target.style.top = position + 'px';
-  		// };
+  		$scope.goDetailBook = function (book) {
+  			$rootScope.myBookData = book;
+  			$state.go('main.mybook');
+  		};
 	});

@@ -84,6 +84,16 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
     }
   })
 
+  .state('main.mybook', {
+    url: '/mybook',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/main/main-mybook.html',
+        controller: 'MainMybookCtrl'
+      }
+    }
+  })
+
   .state('main.registerSearch', {
     url: '/registerSearchMain',
     views: {

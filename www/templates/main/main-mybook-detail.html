@@ -1,0 +1,24 @@
+<ion-modal-view>
+	
+	<ion-header-bar>
+		<h1 class="title">대여요청</h1>
+		<div class="button button-icon ion-close-round" ng-click="modal.hide()"></div>
+	</ion-header-bar>
+
+	<ion-content id="mybook-detail">
+		
+		<div class="list">
+			<div class="item" ng-repeat="person in people track by $index" ng-click="clickPerson($index)" ng-class="{'clicked': clickedId === $index}">
+				<div class="">{{person.account}}</div>
+				<div class="">{{person.phone}}</div>
+				<div class="button-container">
+					<span class="button-custom reject positive" ng-show="clickedId === $index" ng-click="rejectRequest(person)">거절</span>
+					<span class="button-custom accept" ng-show="clickedId === $index" ng-click="acceptRequest(person)">수락</span>
+				</div>
+			</div>
+		</div>
+
+	</ion-content>
+
+
+</ion-modal-view>

@@ -14,10 +14,14 @@
     <div class="item item-text-wrap">
       <div class="list">
         
-        <a class="item item-thumbnail-left" ng-repeat="availbook in items.avail">
+        <a class="item item-thumbnail-left" ng-repeat="availbook in items.avail" ng-click="goDetailBook(availbook)">
           <img ng-src="{{availbook.image}}">
           <h2 ng-bind-html="availbook.title"></h2>
           <p ng-bind-html="availbook.author"></p>
+          <div class="alarm">
+            <span class="alarm-image ion-ios-bell"></span>
+            <span class="alarm-badge" ng-if="availbook.requests !== 0">{{availbook.requests}}</span>
+          </div>
         </a>
 
       </div>
