@@ -9840,6 +9840,7 @@ a.button {
 #signup .container {
   padding-top: 26px; }
 
+<<<<<<< HEAD
 #main-side {
   /*background-color: #5B7065;*/ }
   #main-side .user-image {
@@ -9866,6 +9867,10 @@ a.button {
     /*color: white;*/ }
   #main-side .user-own {
     /*background-color: #C9D1C8;*/ }
+=======
+#main-side .item-avatar {
+  color: red; }
+>>>>>>> upstream/master
 
 #add-button1 {
   position: fixed;
@@ -9879,7 +9884,11 @@ a.button {
   border: 1px solid black;
   text-align: center;
   font-size: 24px;
+<<<<<<< HEAD
   background-color: #387EF5;
+=======
+  background-color: #000000;
+>>>>>>> upstream/master
   padding-top: 15px;
   color: white; }
 
@@ -9895,7 +9904,11 @@ a.button {
   border: 1px solid black;
   text-align: center;
   font-size: 24px;
+<<<<<<< HEAD
   background-color: #387EF5;
+=======
+  background-color: #000000;
+>>>>>>> upstream/master
   padding-top: 15px;
   color: white; }
 
@@ -9908,11 +9921,55 @@ a.button {
 #main-list .ion-android-search {
   color: black; }
 
+<<<<<<< HEAD
 #main-list .item-divider {
   margin-top: -2px; }
 
 .item-input-inset {
   padding-top: 53px; }
+=======
+#main-list .bar-header {
+  background-color: #041435;
+  top: 30px; }
+
+#main-list .item-divider {
+  background-color: #26ADE4;
+  color: black;
+  margin-top: -2px; }
+
+#main-list .bar {
+  background-color: blue; }
+
+#main-list .scroll-content {
+  margin-top: -18px; }
+
+#rentSearchDetail .spinner svg {
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 14px);
+  z-index: 10; }
+
+#register-search-detail .scroll {
+  height: 100%; }
+
+#register-search-detail .content-header {
+  height: 180px;
+  text-align: center; }
+  #register-search-detail .content-header .book-title {
+    height: 40px;
+    white-space: normal;
+    padding-left: 8px;
+    padding-right: 8px; }
+
+#register-search-detail .content-body {
+  height: calc(100% - 180px); }
+  #register-search-detail .content-body .item {
+    border-top: 0px;
+    border-bottom: 0px; }
+  #register-search-detail .content-body .duration {
+    padding-left: 16px;
+    padding-top: 16px; }
+>>>>>>> upstream/master
 
 #signup .scroll {
   height: 100%;

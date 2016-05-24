@@ -22,12 +22,12 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
       StatusBar.styleDefault();
     }
 
-    // Ionic.io();
-    // $rootScope.push = new Ionic.Push({
-    //   'onNotification': function (notification) {
-
-    //   }
-    // });
+    Ionic.io();
+    $rootScope.push = new Ionic.Push({
+      'onNotification': function (notification) {
+        console.log(notification);
+      }
+    });
   });
 })
 
@@ -68,12 +68,14 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
   .state('main', {
     url: '/main',
     abstract: true,
+    cache: false,
     templateUrl: 'templates/main/main.html',
     controller: 'MainCtrl'
   })
 
   .state('main.list', {
     url: '/list',
+    cache: false,
     views: {
       'mainContent': {
         templateUrl: 'templates/main/main-list.html',
@@ -92,106 +94,35 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
     }
   })
 
-  .state('main.registerSearchDetail', {
-    url: '/registerSearchDetail',
-    views: {
-      'mainContent': {
-        templateUrl: 'templates/registerSearch/register-search-detail.html',
-        controller: 'RegisterSearchDetailCtrl'
-      }
-    }
-  })
-
-  // .state('rentSearch', {
-  //   url: '/rentSearch',
-  //   abstract: true,
-  //   templateUrl: 'templates/rentSearch/rent-se.html',
-  //   controller: 'RentSearchCtrl'
-  // })
-
-  // .state('rentSearch.Main', {
-  //   url: '/rentSearchMain',
+  // .state('main.registerSearchDetail', {
+  //   url: '/registerSearchDetail',
   //   views: {
-  //     'rentSearchContent': {
-  //       templateUrl: 'templates/rentSearch/rent-search-main.html',
-  //       controller: 'RentSearchMainCtrl'
+  //     'mainContent': {
+  //       templateUrl: 'templates/registerSearch/register-search-detail.html',
+  //       controller: 'RegisterSearchDetailCtrl'
   //     }
   //   }
   // })
 
-  // .state('rentSearch.Detail', {
+  .state('main.rentSearch', {
+    url: '/rentSearch',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/rentSearch/rent-search-main.html',
+        controller: 'RentSearchMainCtrl'
+      }
+    }
+  });
+
+  // .state('main.rentSearchDetail', {
   //   url: '/rentSearchDetail',
   //   views: {
-  //     'rentSearchContent': {
+  //     'mainContent': {
   //       templateUrl: 'templates/rentSearch/rent-search-detail.html',
   //       controller: 'RentSearchDetailCtrl'
   //     }
   //   }
   // })
-
-  .state('registerSearch', {
-    url: '/registerSearch',
-    abstract: true,
-    templateUrl: 'templates/registerSearch/register-search.html',
-    controller: 'RegisterSearchCtrl'
-  })
-
-  .state('registerSearch.Main', {
-    url: '/registerSearchMain',
-    views: {
-      'registerSearchContent': {
-        templateUrl: 'templates/registerSearch/register-search-main.html',
-        controller: 'RegisterSearchMainCtrl'
-      }
-    }
-  })
-
-  .state('registerSearch.Detail', {
-    url: '/registerSearchDetail',
-    views: {
-      'registerSearchContent': {
-        templateUrl: 'templates/registerSearch/register-search-detail.html',
-        controller: 'RegisterSearchDetailCtrl'
-      }
-    }
-  })
-
-  .state('bookDetail', {
-    url: '/bookDetail',
-    abstract: true,
-    templateUrl: 'templates/bookDetail/book-detail.html',
-    controller: 'BookDetailCtrl'
-  })
-
-  .state('bookDetail.1', {
-    url: '/1',
-    views: {
-      'bookDetailContent': {
-        templateUrl: 'templates/bookDetail/book-detail-1.html',
-        controller: 'BookDetailCtrl1'
-      }
-    }
-  })
-
-  .state('bookDetail.2', {
-    url: '/2',
-    views: {
-      'bookDetailContent': {
-        templateUrl: 'templates/bookDetail/book-detail-2.html',
-        controller: 'BookDetailCtrl2'
-      }
-    }
-  })
-
-  .state('bookDetail.3', {
-    url: '/3',
-    views: {
-      'bookDetailContent': {
-        templateUrl: 'templates/bookDetail/book-detail-3.html',
-        controller: 'BookDetailCtrl3'
-      }
-    }
-  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/intro/login');

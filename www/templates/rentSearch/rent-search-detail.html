@@ -1,10 +1,23 @@
-<ion-view>
-<ion-content id="rentSearchDetail">
+<ion-modal-view id="rentSearchDetail">
+	<ion-header-bar>
+    	<h1 class="title">대여가능 책</h1>
+    	<div class="buttons">
+	        <button class="button button-icon ion-close-round" ng-click="modal.hide()">
+	        </button>
+	      </div>
+    </ion-header-bar>
+	<ion-spinner class="ios" ng-if="isLoading"></ion-spinner>
 
-<div class="bar bar-header">
-  <button class="button button-icon icon ion-chevron-left" ng-click="goRentSearchMain()"></button>
-  <div class="title">책 제목?</div>
-</div>
+	<ion-content>
 
-</ion-content>
-</ion-view>
+		<div class="list">
+			<a class="item item-thumbnail-left" ng-repeat="book in books" ng-click="borrowBook(book)">
+          		<img ng-src="{{book.image}}">
+          		<h2 ng-bind-html="book.title"></h2>
+          		<p ng-bind-html="book.author"></p>
+        	</a>
+		</div>		
+
+	</ion-content>
+
+</ion-modal-view>
