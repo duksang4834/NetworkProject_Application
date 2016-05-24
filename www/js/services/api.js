@@ -1,7 +1,7 @@
 angular.module('bookApp.services')
 
 	.service('Api', function ($http, User, $q) {
-		var isDev = true,
+		var isDev = false,
 			url = (function () {
 				return isDev ? '/api' : 'http://ec2-52-79-167-53.ap-northeast-2.compute.amazonaws.com:8080';
 			})(),
@@ -135,6 +135,40 @@ angular.module('bookApp.services')
 					request_date: data.request_date,
 					start_date: data.start_date,
 					end_date: data.end_date
+				}
+			});
+		};
+
+		this.getRequestsForBook = function (data) {
+			return $http({
+				method: 'GET',
+				url: url + '/getRequests',
+				params: {
+					book_id: data.book_id
+				}
+			});
+		};
+
+		this.rejectRequest = function (data) {
+			return $http({
+				method: 'POST',
+				url: url + '/reject',
+				params: {
+					id: data.id,
+					book_id: data.book_id
+				}
+			});
+		};
+
+		this.acceptRequest = function (data) {
+			return $http({
+				method: 'POST',
+				url: url + '/accept',
+				params: {
+					params: {
+						id: data.id,
+						book_id: data.book_id
+					}
 				}
 			});
 		};

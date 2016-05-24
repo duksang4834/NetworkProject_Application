@@ -4,12 +4,12 @@ angular.module('bookApp.controllers')
 
 		Api.searchMyBook().success(function (response) {
 			$scope.items = response;
-			console.log($scope.items);
 		}).error(function (err) {
 			if(err) {
 				console.log(err)
 			}
-		})
+		});
+		
 		$rootScope.push.register(function (device) {
 			var data = {
 				account: User.userInfo.account,
@@ -27,6 +27,7 @@ angular.module('bookApp.controllers')
   		};
 
   		$scope.goDetailBook = function (book) {
-  			$state.go('main.mybook')
+  			$rootScope.myBookData = book;
+  			$state.go('main.mybook');
   		};
 	});

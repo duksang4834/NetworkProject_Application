@@ -80,8 +80,8 @@ angular.module('bookApp.controllers')
 				scope: $scope,
 				animation: 'slide-in-up'
 			}).then(function(modal) {
-			$scope.modal = modal;
-		});
+			 $scope.modal = modal;
+		  });
 
 	  	$scope.goMainList = function () {
 			$state.go('main.list');
@@ -97,7 +97,6 @@ angular.module('bookApp.controllers')
 			$scope.book.start_date = (new Date($scope.data.startYear.label, $scope.data.startMonth.label, $scope.data.startDate.label)).getTime();
 			$scope.book.end_date = (new Date($scope.data.endYear.label, $scope.data.endMonth.label, $scope.data.endDate.label)).getTime();
 			$scope.book.cleanness = $scope.data.cleanness.label;
-			console.log($scope.book);
 
 			Api.registerBook($scope.book).success(function (response) {
 				$scope.modal.hide();				

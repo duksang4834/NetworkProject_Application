@@ -1,36 +1,36 @@
 #add-button1 {
-			position: fixed;
-			right: 5%;
-			margin-top: 440px;
-			border-radius: 50%;
-			width: 56px;
-			height: 56px;
-			line-height: 47px;
-			z-index: 10;
-			border: 1px solid black;
-			text-align: center;
-			font-size: 24px;
-			background-color: #387EF5;
-			padding-top: 15px;
-			color: white;
-		}
+	position: fixed;
+	right: 5%;
+	bottom: 100px;
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	line-height: 47px;
+	z-index: 10;
+	border: 0px;
+	text-align: center;
+	font-size: 24px;
+	background-color: #387EF5;
+	padding-top: 15px;
+	color: white;
+}
 
-		#add-button2 {
-			position: fixed;
-			right: 5%;
-			margin-top: 510px;
-			border-radius: 50%;
-			width: 56px;
-			height: 56px;
-			line-height: 47px;
-			z-index: 10;
-			border: 1px solid black;
-			text-align: center;
-			font-size: 24px;
-			background-color: #387EF5;
-			padding-top: 15px;
-			color: white;
-		}
+#add-button2 {
+	position: fixed;
+	right: 5%;
+	bottom: 30px;
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	line-height: 47px;
+	z-index: 10;
+	border: 0px;
+	text-align: center;
+	font-size: 24px;
+	background-color: #387EF5;
+	padding-top: 15px;
+	color: white;
+}
 		
 #main-list {
 	.card {
@@ -90,3 +90,34 @@
 		}
 }
 
+#mybook-detail {
+	.item {
+		height: 90px;
+		transition: height 0.5s ease;
+
+		&.clicked {
+			height: 120px;
+			transition: height 0.5s ease;
+		}
+
+		.button-container {
+
+			.button-custom {
+				display: inline-block;
+				width: 49%;
+				height: 40px;
+				border-radius: 4px;
+				line-height: 40px;
+				font-size: 16px;
+				color: #FFF;
+				text-align: center;
+				&.reject {
+					background-color: #878787;
+				}
+				&.accept {
+					background-color: blue;
+				}
+			}
+		}
+	}
+}
