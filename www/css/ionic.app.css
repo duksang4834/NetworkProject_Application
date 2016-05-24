@@ -9844,6 +9844,29 @@ a.button {
 
 #main-list .card {
   position: relative; }
+  #main-list .card .item {
+    position: relative; }
+    #main-list .card .item .alarm {
+      position: absolute;
+      top: 8px;
+      right: 4px; }
+      #main-list .card .item .alarm .alarm-image {
+        font-size: 30px; }
+      #main-list .card .item .alarm .alarm-badge {
+        display: block;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        text-align: center;
+        font-size: 16px;
+        position: absolute;
+        top: 0px;
+        right: -6px;
+        color: #FFFFFF;
+        z-index: 10;
+        border-radius: 50%;
+        border: 1px solid #777;
+        background-color: #777; }
 
 #main-list .ion-plus {
   color: black; }
