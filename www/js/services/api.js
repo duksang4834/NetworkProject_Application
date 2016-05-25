@@ -165,10 +165,18 @@ angular.module('bookApp.services')
 				method: 'POST',
 				url: url + '/accept',
 				params: {
-					params: {
 						id: data.id,
 						book_id: data.book_id
-					}
+				}
+			});
+		};
+
+		this.returnBook = function (data) {
+			return $http({
+				method: 'POST',
+				url: url + '/return',
+				params: {
+					book_id: data.book_id
 				}
 			});
 		};

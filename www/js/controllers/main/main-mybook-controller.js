@@ -32,8 +32,8 @@ angular.module('bookApp.controllers')
 
 		$scope.rejectRequest = function (book) {
 			var data = {
-				id: book.request_id,
-				book_id: book.id
+				id: book.id,
+				book_id: book.book_id
 			};
 			Api.rejectRequest(data).success(function (response) {
 
@@ -41,13 +41,14 @@ angular.module('bookApp.controllers')
 				console.log(error);
 			})
 		};
-		$scope.acceptRequest = function () {
+		$scope.acceptRequest = function (book) {
+			console.log(book);
 			var data = {
-				id: book.request_id,
-				book_id: book.id
+				id: book.id,
+				book_id: book.book_id
 			};
 			Api.acceptRequest(data).success(function (response) {
-
+				$scope.modal.hide();
 			}).error(function (error) {
 				console.log(error);
 			});

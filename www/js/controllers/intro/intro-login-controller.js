@@ -22,17 +22,19 @@ angular.module('bookApp.controllers')
 		$scope.goMain = function () {
 
 			Api.login($scope.data).success(function (response1) {
-				
-				Util.localStorage.set('account', $scope.data.account);
-				Util.localStorage.set('password', $scope.data.password);
+				if (response1.success) { 
+					Util.localStorage.set('account', $scope.data.account);
+					Util.localStorage.set('password', $scope.data.password);
+					console.log($scope.data);
 
-				Api.getUserInfo($scope.data).success(function (response2) {
-					User.userInfo = response2;
-					console.log(User.userInfo);
-					$state.go('main.list');
-				}).error(function (error) {
+					Api.getUserInfo($scope.data).success(function (response2) {
+						User.userInfo = response2;
+						console.log(response2);
+						$state.go('main.list');
+					}).error(function (error) {
 
-				});
+					});
+				}
 			}).error(function (error) {
 				// login error
 			});
@@ -43,5 +45,5 @@ angular.module('bookApp.controllers')
 			$state.go('intro.signup');
 		};
 
-		init();
+		// init();
 	});

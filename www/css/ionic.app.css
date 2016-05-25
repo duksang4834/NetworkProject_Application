@@ -9969,24 +9969,24 @@ a.button {
   left: calc(50% - 14px);
   z-index: 10; }
 
-#register-search-detail .scroll, #mybook-available .scroll {
+#register-search-detail .scroll, #mybook-available .scroll, #lentbook .scroll {
   height: 100%; }
 
-#register-search-detail .content-header, #mybook-available .content-header {
+#register-search-detail .content-header, #mybook-available .content-header, #lentbook .content-header {
   height: 180px;
   text-align: center; }
-  #register-search-detail .content-header .book-title, #mybook-available .content-header .book-title {
+  #register-search-detail .content-header .book-title, #mybook-available .content-header .book-title, #lentbook .content-header .book-title {
     height: 40px;
     white-space: normal;
     padding-left: 8px;
     padding-right: 8px; }
 
-#register-search-detail .content-body, #mybook-available .content-body {
+#register-search-detail .content-body, #mybook-available .content-body, #lentbook .content-body {
   height: calc(100% - 180px); }
-  #register-search-detail .content-body .item, #mybook-available .content-body .item {
+  #register-search-detail .content-body .item, #mybook-available .content-body .item, #lentbook .content-body .item {
     border-top: 0px;
     border-bottom: 0px; }
-  #register-search-detail .content-body .duration, #mybook-available .content-body .duration {
+  #register-search-detail .content-body .duration, #mybook-available .content-body .duration, #lentbook .content-body .duration {
     padding-left: 16px;
     padding-top: 16px; }
 

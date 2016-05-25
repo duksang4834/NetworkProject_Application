@@ -10,17 +10,21 @@ angular.module('bookApp.controllers')
 			}
 		});
 		
-		$rootScope.push.register(function (device) {
-			var data = {
-				account: User.userInfo.account,
-				device: device._token
-			};
-			Api.registerDevice(data).success(function (response) {
+		if (!User.userInfo.device) { 
+			$rootScope.push.register(function (device) {
+				var data = {
+					account: User.userInfo.account,
+					device: device._token
+				};
+				console.log(data.device);
 
-			}).error(function (error) {
+				Api.registerDevice(data).success(function (response) {
 
+				}).error(function (error) {
+
+				});
 			});
-		});
+		}
 
 		$scope.toggleLeft = function() {
     		$ionicSideMenuDelegate.toggleLeft();
@@ -30,4 +34,10 @@ angular.module('bookApp.controllers')
   			$rootScope.myBookData = book;
   			$state.go('main.mybook');
   		};
+
+  		$scope.goDetailLentBook = function (book) {
+  			$rootScope.myLentBookData = book;
+  			$state.go('main.lentbook');
+  		};
+
 	});
