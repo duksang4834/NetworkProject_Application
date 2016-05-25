@@ -94,6 +94,16 @@ angular.module('bookApp', ['ionic','ionic.service.core', 'ngCordova', 'bookApp.c
     }
   })
 
+  .state('main.lentbook', {
+    url: '/lentbook',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/main/main-lentbook-detail.html',
+        controller: 'MainLentbookCtrl'
+      }
+    }
+  })
+
   .state('main.registerSearch', {
     url: '/registerSearchMain',
     views: {

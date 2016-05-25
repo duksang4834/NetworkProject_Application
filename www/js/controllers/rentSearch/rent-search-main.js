@@ -26,6 +26,7 @@ angular.module('bookApp.controllers')
 
 				Api.searchBookToBorrow(book).success(function (response) {
 		  			$scope.books = response;
+            console.log(response);
 		  		}).error(function (error) {
 		  			if (error) {
 		  				console.log(error);

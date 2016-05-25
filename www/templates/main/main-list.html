@@ -50,7 +50,7 @@
     <div class="item item-text-wrap">
       <div class="list">
       
-        <a class="item item-thumbnail-left" ng-repeat="borrowbook in items.borrow">
+        <a class="item item-thumbnail-left" ng-repeat="borrowbook in items.borrow" ng-click="goDetailLentBook(borrowbook)">
           <img ng-src="{{borrowbook.image}}">
           <h2 ng-bind-html="borrowbook.title"></h2>
           <p ng-bind-html="borrowbook.author"></p>
